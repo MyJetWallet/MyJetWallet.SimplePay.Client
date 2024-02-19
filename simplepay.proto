@@ -89,7 +89,12 @@ message SimplePayAssetAndNetworkDto
 
 enum ResultCodes {
   OK = 0;
-  B = 1;
+  InvalidAddress = 1;
+  InvalidTag = 2;
+  ContactNotFound = 3;
+  ContactGroupNotFound = 4;
+  AssetNotFound = 5;
+  BlockchainNotFound = 6;
 }
 
 message SimplePayResponse
@@ -138,6 +143,12 @@ message SimplePayBalanceListResponse
   repeated SimplePayBalance Contacts = 3;
 }
 
+message SimplePayAddressValidationResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+}
+
 
 /*
  * ====================================================
@@ -161,6 +172,7 @@ service SimplePayClientGrpc {
   rpc ContactDelete(SimplePayIdDto) returns (.google.protobuf.Empty);     // delete contact by Id
   rpc ContactGetById(SimplePayIdDto) returns (SimplePayContactResponse);  // get contact by Id
   rpc ContactGetAllContactStream(.google.protobuf.Empty) returns (stream SimplePayContact); // get all contacts as stream
+  rpc ValidateAddress(SimplePayAddress) returns (SimplePayAddressValidationResponse); // validate blockchain address
   
   
 }
