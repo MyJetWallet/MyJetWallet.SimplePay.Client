@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "zI6tdv0EmaYvYS1IN8lbY9pUVaStWtzSCPxjPxx8Y2yN7639d5OO1sNlAva33X+BXbVYG2fhSfp1qy5GYhVs1Q==",
+  "success": true,
+  "projectFilePath": "/Users/alexey/git/MyJetWallet.SimplePay.Client/src/TestApp/TestApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/alexey/.nuget/packages/google.protobuf/3.25.3/google.protobuf.3.25.3.nupkg.sha512",
+    "/Users/alexey/.nuget/packages/grpc.core.api/2.60.0/grpc.core.api.2.60.0.nupkg.sha512",
+    "/Users/alexey/.nuget/packages/grpc.net.client/2.60.0/grpc.net.client.2.60.0.nupkg.sha512",
+    "/Users/alexey/.nuget/packages/grpc.net.common/2.60.0/grpc.net.common.2.60.0.nupkg.sha512",
+    "/Users/alexey/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

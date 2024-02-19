@@ -1,0 +1,166 @@
+syntax = "proto3";
+
+package MyJetWallet.SimplePay;
+
+import "google/protobuf/empty.proto";
+
+message HelloMessage {
+
+  string Message = 1;
+
+}
+
+/*
+ * ====================================================
+ * Simple Pay API - Data Model
+ * ====================================================
+ */
+
+// contact who can be receive payments from us. Or who can be sender of payments by invoice
+message SimplePayContact
+{
+  string Id = 1;
+  string Name = 2;
+  optional string GroupId = 3;
+  optional string Description = 4;
+  string AssetSymbol = 5;
+  string NetworkId = 6;
+  string BlockchainAddress = 7;
+  optional string BlockchainTag = 8;
+}
+
+// Blockchain network description
+message SimplePayBlockchain
+{
+  string NetworkId = 1;
+  string Name = 2;
+  bool IsTagSupported = 3;
+}
+
+// Asset description with supported networks
+message SimplePayAsset
+{
+  string Symbol = 1;
+  string Name = 2;
+  string IconUrl = 3;
+  repeated string Networks = 4;
+}
+
+// Blockchain address description
+message SimplePayAddress
+{
+  string AssetSymbol = 1;
+  string NetworkId = 2;
+  string Address = 3;
+  optional string Tag = 4;
+}
+
+// workspace balance
+message SimplePayBalance
+{
+  string AssetSymbol = 1;
+  string Balance = 2;
+}
+
+
+/*
+ * ====================================================
+ * Simple Pay API - Request Models
+ * ====================================================
+ */
+
+message SimplePayIdDto
+{
+  string Id = 1;
+}
+
+message SimplePayAssetAndNetworkDto
+{
+  string AssetSymbol = 1;
+  string NetworkId = 2;
+}
+
+
+/*
+ * ====================================================
+ * Simple Pay API - Response Models
+ * ====================================================
+ */
+
+enum ResultCodes {
+  OK = 0;
+  B = 1;
+}
+
+message SimplePayResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+}
+
+message SimplePayContactResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+
+  SimplePayContact Contact = 3;
+}
+
+message SimplePayContactListResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+  
+  repeated SimplePayContact Contacts = 3;
+}
+
+message SimplePayAssetListResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+
+  repeated SimplePayAsset Contacts = 3;
+}
+
+message SimplePayBlockchainListResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+
+  repeated SimplePayBlockchain Contacts = 3;
+}
+
+message SimplePayBalanceListResponse
+{
+  ResultCodes Result = 1;
+  optional string Message = 2;
+
+  repeated SimplePayBalance Contacts = 3;
+}
+
+
+/*
+ * ====================================================
+ * Simple Pay API - Service
+ * ====================================================
+ */
+
+service SimplePayClientGrpc {
+
+  rpc Hello (HelloMessage) returns (HelloMessage);
+  rpc Notify (HelloMessage) returns (.google.protobuf.Empty);
+
+  rpc DictionaryGetAllAssets(.google.protobuf.Empty) returns (SimplePayAssetListResponse); // get all assets
+  rpc DictionaryGetAllBlockchains(.google.protobuf.Empty) returns (SimplePayBlockchainListResponse); // get all blockchains
+  
+  rpc AccountGetAllBalances(.google.protobuf.Empty) returns (SimplePayBalanceListResponse); // get all balances
+  rpc AccountGetDepositAddress(SimplePayAssetAndNetworkDto) returns (SimplePayAddress); // get deposit address for asset and network
+  
+  rpc ContactCreate(SimplePayContact) returns (SimplePayContactResponse); // create contact and return it with Id
+  rpc ContactUpdate(SimplePayContact) returns (SimplePayContactResponse); // update existing contact and return it
+  rpc ContactDelete(SimplePayIdDto) returns (.google.protobuf.Empty);     // delete contact by Id
+  rpc ContactGetById(SimplePayIdDto) returns (SimplePayContactResponse);  // get contact by Id
+  rpc ContactGetAllContactStream(.google.protobuf.Empty) returns (stream SimplePayContact); // get all contacts as stream
+  
+  
+}
