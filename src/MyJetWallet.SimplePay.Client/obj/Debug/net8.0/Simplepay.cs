@@ -26,95 +26,178 @@ namespace MyJetWallet.SimplePay {
           string.Concat(
             "Cg9zaW1wbGVwYXkucHJvdG8SFU15SmV0V2FsbGV0LlNpbXBsZVBheRobZ29v",
             "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIh8KDEhlbGxvTWVzc2FnZRIPCgdN",
-            "ZXNzYWdlGAEgASgJIukBChBTaW1wbGVQYXlDb250YWN0EgoKAklkGAEgASgJ",
+            "ZXNzYWdlGAEgASgJIvwBChBTaW1wbGVQYXlDb250YWN0EgoKAklkGAEgASgJ",
             "EgwKBE5hbWUYAiABKAkSFAoHR3JvdXBJZBgDIAEoCUgAiAEBEhgKC0Rlc2Ny",
             "aXB0aW9uGAQgASgJSAGIAQESEwoLQXNzZXRTeW1ib2wYBSABKAkSEQoJTmV0",
             "d29ya0lkGAYgASgJEhkKEUJsb2NrY2hhaW5BZGRyZXNzGAcgASgJEhoKDUJs",
-            "b2NrY2hhaW5UYWcYCCABKAlIAogBAUIKCghfR3JvdXBJZEIOCgxfRGVzY3Jp",
-            "cHRpb25CEAoOX0Jsb2NrY2hhaW5UYWciTgoTU2ltcGxlUGF5QmxvY2tjaGFp",
-            "bhIRCglOZXR3b3JrSWQYASABKAkSDAoETmFtZRgCIAEoCRIWCg5Jc1RhZ1N1",
-            "cHBvcnRlZBgDIAEoCCJRCg5TaW1wbGVQYXlBc3NldBIOCgZTeW1ib2wYASAB",
-            "KAkSDAoETmFtZRgCIAEoCRIPCgdJY29uVXJsGAMgASgJEhAKCE5ldHdvcmtz",
-            "GAQgAygJImUKEFNpbXBsZVBheUFkZHJlc3MSEwoLQXNzZXRTeW1ib2wYASAB",
-            "KAkSEQoJTmV0d29ya0lkGAIgASgJEg8KB0FkZHJlc3MYAyABKAkSEAoDVGFn",
-            "GAQgASgJSACIAQFCBgoEX1RhZyI4ChBTaW1wbGVQYXlCYWxhbmNlEhMKC0Fz",
-            "c2V0U3ltYm9sGAEgASgJEg8KB0JhbGFuY2UYAiABKAkiHAoOU2ltcGxlUGF5",
-            "SWREdG8SCgoCSWQYASABKAkiRQobU2ltcGxlUGF5QXNzZXRBbmROZXR3b3Jr",
-            "RHRvEhMKC0Fzc2V0U3ltYm9sGAEgASgJEhEKCU5ldHdvcmtJZBgCIAEoCSJp",
-            "ChFTaW1wbGVQYXlSZXNwb25zZRIyCgZSZXN1bHQYASABKA4yIi5NeUpldFdh",
-            "bGxldC5TaW1wbGVQYXkuUmVzdWx0Q29kZXMSFAoHTWVzc2FnZRgCIAEoCUgA",
-            "iAEBQgoKCF9NZXNzYWdlIqoBChhTaW1wbGVQYXlDb250YWN0UmVzcG9uc2US",
-            "MgoGUmVzdWx0GAEgASgOMiIuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlJlc3Vs",
-            "dENvZGVzEhQKB01lc3NhZ2UYAiABKAlIAIgBARI4CgdDb250YWN0GAMgASgL",
-            "MicuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUNvbnRhY3RCCgoI",
-            "X01lc3NhZ2UirwEKHFNpbXBsZVBheUNvbnRhY3RMaXN0UmVzcG9uc2USMgoG",
-            "UmVzdWx0GAEgASgOMiIuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlJlc3VsdENv",
-            "ZGVzEhQKB01lc3NhZ2UYAiABKAlIAIgBARI5CghDb250YWN0cxgDIAMoCzIn",
-            "Lk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlDb250YWN0QgoKCF9N",
-            "ZXNzYWdlIqsBChpTaW1wbGVQYXlBc3NldExpc3RSZXNwb25zZRIyCgZSZXN1",
-            "bHQYASABKA4yIi5NeUpldFdhbGxldC5TaW1wbGVQYXkuUmVzdWx0Q29kZXMS",
-            "FAoHTWVzc2FnZRgCIAEoCUgAiAEBEjcKCENvbnRhY3RzGAMgAygLMiUuTXlK",
-            "ZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUFzc2V0QgoKCF9NZXNzYWdl",
-            "IrUBCh9TaW1wbGVQYXlCbG9ja2NoYWluTGlzdFJlc3BvbnNlEjIKBlJlc3Vs",
-            "dBgBIAEoDjIiLk15SmV0V2FsbGV0LlNpbXBsZVBheS5SZXN1bHRDb2RlcxIU",
-            "CgdNZXNzYWdlGAIgASgJSACIAQESPAoIQ29udGFjdHMYAyADKAsyKi5NeUpl",
-            "dFdhbGxldC5TaW1wbGVQYXkuU2ltcGxlUGF5QmxvY2tjaGFpbkIKCghfTWVz",
-            "c2FnZSKvAQocU2ltcGxlUGF5QmFsYW5jZUxpc3RSZXNwb25zZRIyCgZSZXN1",
-            "bHQYASABKA4yIi5NeUpldFdhbGxldC5TaW1wbGVQYXkuUmVzdWx0Q29kZXMS",
-            "FAoHTWVzc2FnZRgCIAEoCUgAiAEBEjkKCENvbnRhY3RzGAMgAygLMicuTXlK",
-            "ZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUJhbGFuY2VCCgoIX01lc3Nh",
-            "Z2UqHAoLUmVzdWx0Q29kZXMSBgoCT0sQABIFCgFCEAEy0wgKE1NpbXBsZVBh",
-            "eUNsaWVudEdycGMSUQoFSGVsbG8SIy5NeUpldFdhbGxldC5TaW1wbGVQYXku",
-            "SGVsbG9NZXNzYWdlGiMuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LkhlbGxvTWVz",
-            "c2FnZRJFCgZOb3RpZnkSIy5NeUpldFdhbGxldC5TaW1wbGVQYXkuSGVsbG9N",
-            "ZXNzYWdlGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmMKFkRpY3Rpb25hcnlH",
-            "ZXRBbGxBc3NldHMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaMS5NeUpldFdh",
-            "bGxldC5TaW1wbGVQYXkuU2ltcGxlUGF5QXNzZXRMaXN0UmVzcG9uc2USbQob",
-            "RGljdGlvbmFyeUdldEFsbEJsb2NrY2hhaW5zEhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5GjYuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUJsb2Nr",
-            "Y2hhaW5MaXN0UmVzcG9uc2USZAoVQWNjb3VudEdldEFsbEJhbGFuY2VzEhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GjMuTXlKZXRXYWxsZXQuU2ltcGxlUGF5",
-            "LlNpbXBsZVBheUJhbGFuY2VMaXN0UmVzcG9uc2USdwoYQWNjb3VudEdldERl",
-            "cG9zaXRBZGRyZXNzEjIuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBh",
-            "eUFzc2V0QW5kTmV0d29ya0R0bxonLk15SmV0V2FsbGV0LlNpbXBsZVBheS5T",
-            "aW1wbGVQYXlBZGRyZXNzEmkKDUNvbnRhY3RDcmVhdGUSJy5NeUpldFdhbGxl",
-            "dC5TaW1wbGVQYXkuU2ltcGxlUGF5Q29udGFjdBovLk15SmV0V2FsbGV0LlNp",
-            "bXBsZVBheS5TaW1wbGVQYXlDb250YWN0UmVzcG9uc2USaQoNQ29udGFjdFVw",
-            "ZGF0ZRInLk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlDb250YWN0",
+            "b2NrY2hhaW5UYWcYCCABKAlIAogBARIRCglXb3Jrc3BhY2UYZCABKAlCCgoI",
+            "X0dyb3VwSWRCDgoMX0Rlc2NyaXB0aW9uQhAKDl9CbG9ja2NoYWluVGFnIk4K",
+            "E1NpbXBsZVBheUJsb2NrY2hhaW4SEQoJTmV0d29ya0lkGAEgASgJEgwKBE5h",
+            "bWUYAiABKAkSFgoOSXNUYWdTdXBwb3J0ZWQYAyABKAgiUQoOU2ltcGxlUGF5",
+            "QXNzZXQSDgoGU3ltYm9sGAEgASgJEgwKBE5hbWUYAiABKAkSDwoHSWNvblVy",
+            "bBgDIAEoCRIQCghOZXR3b3JrcxgEIAMoCSJlChBTaW1wbGVQYXlBZGRyZXNz",
+            "EhMKC0Fzc2V0U3ltYm9sGAEgASgJEhEKCU5ldHdvcmtJZBgCIAEoCRIPCgdB",
+            "ZGRyZXNzGAMgASgJEhAKA1RhZxgEIAEoCUgAiAEBQgYKBF9UYWciOAoQU2lt",
+            "cGxlUGF5QmFsYW5jZRITCgtBc3NldFN5bWJvbBgBIAEoCRIPCgdCYWxhbmNl",
+            "GAIgASgJIqkCChFTaW1wbGVQYXlUcmFuc2ZlchIKCgJJZBgBIAEoCRIVCg1T",
+            "dGF0ZW1lbnROYW1lGAIgASgJEhEKCUNvbnRhY3RJZBgDIAEoCRIPCgdDb21t",
+            "ZW50GAQgASgJEjUKBlN0YXR1cxgFIAEoDjIlLk15SmV0V2FsbGV0LlNpbXBs",
+            "ZVBheS5UcmFuc2ZlclN0YXR1cxITCgtBc3NldFN5bWJvbBgKIAEoCRIVCg1Q",
+            "YXltZW50QW1vdW50GAsgASgJEhEKCUZlZUFtb3VudBgMIAEoCRIZChFUcmFu",
+            "c2FjdGlvbkFtb3VudBgNIAEoCRITCgtTZXR0bGVBc3NldBgOIAEoCRIUCgxT",
+            "ZXR0bGVBbW91bnQYDyABKAkSEQoJV29ya3NwYWNlGGQgASgJIuQBChJTaW1w",
+            "bGVQYXlTdGF0ZW1lbnQSCgoCSWQYASABKAkSDAoETmFtZRgCIAEoCRITCgtE",
+            "ZXNjcmlwdGlvbhgDIAEoCRIYChBDcmVhdGVkVGltZXN0YW1wGAQgASgJEjUK",
+            "BlN0YXR1cxgFIAEoDjIlLk15SmV0V2FsbGV0LlNpbXBsZVBheS5UcmFuc2Zl",
+            "clN0YXR1cxI7CglUcmFuc2ZlcnMYCiADKAsyKC5NeUpldFdhbGxldC5TaW1w",
+            "bGVQYXkuU2ltcGxlUGF5VHJhbnNmZXISEQoJV29ya3NwYWNlGGQgASgJIioK",
+            "FVNpbXBsZVBheVdvcmtzcGFjZUR0bxIRCglXb3Jrc3BhY2UYZCABKAkiLwoO",
+            "U2ltcGxlUGF5SWREdG8SCgoCSWQYASABKAkSEQoJV29ya3NwYWNlGGQgASgJ",
+            "IjMKEFNpbXBsZVBheU5hbWVEdG8SDAoETmFtZRgBIAEoCRIRCglXb3Jrc3Bh",
+            "Y2UYZCABKAkiWAobU2ltcGxlUGF5QXNzZXRBbmROZXR3b3JrRHRvEhMKC0Fz",
+            "c2V0U3ltYm9sGAEgASgJEhEKCU5ldHdvcmtJZBgCIAEoCRIRCglXb3Jrc3Bh",
+            "Y2UYZCABKAkitwIKGFNpbXBsZVBheVRyYW5zZmVyUmVxdWVzdBIVCg1TdGF0",
+            "ZW1lbnROYW1lGAIgASgJEhEKCUNvbnRhY3RJZBgDIAEoCRIPCgdDb21tZW50",
+            "GAQgASgJEhMKC0Fzc2V0U3ltYm9sGAogASgJEhoKDVBheW1lbnRBbW91bnQY",
+            "CyABKAlIAIgBARIeChFUcmFuc2FjdGlvbkFtb3VudBgNIAEoCUgBiAEBEhgK",
+            "C1NldHRsZUFzc2V0GA4gASgJSAKIAQESGQoMU2V0dGxlQW1vdW50GA8gASgJ",
+            "SAOIAQESEQoJV29ya3NwYWNlGGQgASgJQhAKDl9QYXltZW50QW1vdW50QhQK",
+            "El9UcmFuc2FjdGlvbkFtb3VudEIOCgxfU2V0dGxlQXNzZXRCDwoNX1NldHRs",
+            "ZUFtb3VudCI0Ch9TaW1wbGVQYXlXb3Jrc3BhY2VDcmVhdGVSZXF1ZXN0EhEK",
+            "CVdvcmtzcGFjZRhkIAEoCSJrChFTaW1wbGVQYXlSZXNwb25zZRIzCgZSZXN1",
+            "bHQY6QcgASgOMiIuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlJlc3VsdENvZGVz",
+            "EhUKB01lc3NhZ2UY6gcgASgJSACIAQFCCgoIX01lc3NhZ2UirAEKGFNpbXBs",
+            "ZVBheUNvbnRhY3RSZXNwb25zZRIzCgZSZXN1bHQY6QcgASgOMiIuTXlKZXRX",
+            "YWxsZXQuU2ltcGxlUGF5LlJlc3VsdENvZGVzEhUKB01lc3NhZ2UY6gcgASgJ",
+            "SACIAQESOAoHQ29udGFjdBgBIAEoCzInLk15SmV0V2FsbGV0LlNpbXBsZVBh",
+            "eS5TaW1wbGVQYXlDb250YWN0QgoKCF9NZXNzYWdlIrEBChxTaW1wbGVQYXlD",
+            "b250YWN0TGlzdFJlc3BvbnNlEjMKBlJlc3VsdBjpByABKA4yIi5NeUpldFdh",
+            "bGxldC5TaW1wbGVQYXkuUmVzdWx0Q29kZXMSFQoHTWVzc2FnZRjqByABKAlI",
+            "AIgBARI5CghDb250YWN0cxgBIAMoCzInLk15SmV0V2FsbGV0LlNpbXBsZVBh",
+            "eS5TaW1wbGVQYXlDb250YWN0QgoKCF9NZXNzYWdlIq0BChpTaW1wbGVQYXlB",
+            "c3NldExpc3RSZXNwb25zZRIzCgZSZXN1bHQY6QcgASgOMiIuTXlKZXRXYWxs",
+            "ZXQuU2ltcGxlUGF5LlJlc3VsdENvZGVzEhUKB01lc3NhZ2UY6gcgASgJSACI",
+            "AQESNwoIQ29udGFjdHMYASADKAsyJS5NeUpldFdhbGxldC5TaW1wbGVQYXku",
+            "U2ltcGxlUGF5QXNzZXRCCgoIX01lc3NhZ2UitwEKH1NpbXBsZVBheUJsb2Nr",
+            "Y2hhaW5MaXN0UmVzcG9uc2USMwoGUmVzdWx0GOkHIAEoDjIiLk15SmV0V2Fs",
+            "bGV0LlNpbXBsZVBheS5SZXN1bHRDb2RlcxIVCgdNZXNzYWdlGOoHIAEoCUgA",
+            "iAEBEjwKCENvbnRhY3RzGAEgAygLMiouTXlKZXRXYWxsZXQuU2ltcGxlUGF5",
+            "LlNpbXBsZVBheUJsb2NrY2hhaW5CCgoIX01lc3NhZ2UisQEKHFNpbXBsZVBh",
+            "eUJhbGFuY2VMaXN0UmVzcG9uc2USMwoGUmVzdWx0GOkHIAEoDjIiLk15SmV0",
+            "V2FsbGV0LlNpbXBsZVBheS5SZXN1bHRDb2RlcxIVCgdNZXNzYWdlGOoHIAEo",
+            "CUgAiAEBEjkKCENvbnRhY3RzGAEgAygLMicuTXlKZXRXYWxsZXQuU2ltcGxl",
+            "UGF5LlNpbXBsZVBheUJhbGFuY2VCCgoIX01lc3NhZ2UifAoiU2ltcGxlUGF5",
+            "QWRkcmVzc1ZhbGlkYXRpb25SZXNwb25zZRIzCgZSZXN1bHQY6QcgASgOMiIu",
+            "TXlKZXRXYWxsZXQuU2ltcGxlUGF5LlJlc3VsdENvZGVzEhUKB01lc3NhZ2UY",
+            "6gcgASgJSACIAQFCCgoIX01lc3NhZ2UikgIKIFNpbXBsZVBheVRyYW5zZmVy",
+            "UHJldmlld1Jlc3BvbnNlEjMKBlJlc3VsdBjpByABKA4yIi5NeUpldFdhbGxl",
+            "dC5TaW1wbGVQYXkuUmVzdWx0Q29kZXMSFQoHTWVzc2FnZRjqByABKAlIAIgB",
+            "ARIRCglDb250YWN0SWQYAyABKAkSEwoLQXNzZXRTeW1ib2wYCiABKAkSFQoN",
+            "UGF5bWVudEFtb3VudBgLIAEoCRIRCglGZWVBbW91bnQYDCABKAkSGQoRVHJh",
+            "bnNhY3Rpb25BbW91bnQYDSABKAkSEwoLU2V0dGxlQXNzZXQYDiABKAkSFAoM",
+            "U2V0dGxlQW1vdW50GA8gASgJQgoKCF9NZXNzYWdlIrIBChpTaW1wbGVQYXlT",
+            "dGF0ZW1lbnRSZXNwb25zZRIzCgZSZXN1bHQY6QcgASgOMiIuTXlKZXRXYWxs",
+            "ZXQuU2ltcGxlUGF5LlJlc3VsdENvZGVzEhUKB01lc3NhZ2UY6gcgASgJSACI",
+            "AQESPAoJU3RhdGVtZW50GAEgASgLMikuTXlKZXRXYWxsZXQuU2ltcGxlUGF5",
+            "LlNpbXBsZVBheVN0YXRlbWVudEIKCghfTWVzc2FnZSpWCg5UcmFuc2ZlclN0",
+            "YXR1cxIJCgVEcmFmdBAAEgsKB1BlbmRpbmcQARIOCgpJblByb2dyZXNzEAIS",
+            "DQoJQ29tcGxldGVkEAMSDQoJQ2FuY2VsbGVkEAQqwQEKC1Jlc3VsdENvZGVz",
+            "EhAKDFVuYXV0aG9yaXNlZBAAEgYKAk9LEAoSEgoOSW52YWxpZEFkZHJlc3MQ",
+            "CxIOCgpJbnZhbGlkVGFnEAwSEwoPQ29udGFjdE5vdEZvdW5kEA0SGAoUQ29u",
+            "dGFjdEdyb3VwTm90Rm91bmQQDhIRCg1Bc3NldE5vdEZvdW5kEA8SFgoSQmxv",
+            "Y2tjaGFpbk5vdEZvdW5kEBASGgoWU3RhdGVtZW50QWxyZWFkeUV4aXN0cxAR",
+            "MrUOChNTaW1wbGVQYXlDbGllbnRHcnBjElEKBUhlbGxvEiMuTXlKZXRXYWxs",
+            "ZXQuU2ltcGxlUGF5LkhlbGxvTWVzc2FnZRojLk15SmV0V2FsbGV0LlNpbXBs",
+            "ZVBheS5IZWxsb01lc3NhZ2USSgoGV2hvSUFtEhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5GiguTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheVJlc3Bv",
+            "bnNlEmMKFkRpY3Rpb25hcnlHZXRBbGxBc3NldHMSFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkaMS5NeUpldFdhbGxldC5TaW1wbGVQYXkuU2ltcGxlUGF5QXNz",
+            "ZXRMaXN0UmVzcG9uc2USbQobRGljdGlvbmFyeUdldEFsbEJsb2NrY2hhaW5z",
+            "EhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GjYuTXlKZXRXYWxsZXQuU2ltcGxl",
+            "UGF5LlNpbXBsZVBheUJsb2NrY2hhaW5MaXN0UmVzcG9uc2USVwoPV29ya3Nw",
+            "YWNlQ3JlYXRlEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GiwuTXlKZXRXYWxs",
+            "ZXQuU2ltcGxlUGF5LlNpbXBsZVBheVdvcmtzcGFjZUR0bxJ6ChVBY2NvdW50",
+            "R2V0QWxsQmFsYW5jZXMSLC5NeUpldFdhbGxldC5TaW1wbGVQYXkuU2ltcGxl",
+            "UGF5V29ya3NwYWNlRHRvGjMuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBs",
+            "ZVBheUJhbGFuY2VMaXN0UmVzcG9uc2USdwoYQWNjb3VudEdldERlcG9zaXRB",
+            "ZGRyZXNzEjIuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUFzc2V0",
+            "QW5kTmV0d29ya0R0bxonLk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQ",
+            "YXlBZGRyZXNzEmkKDUNvbnRhY3RDcmVhdGUSJy5NeUpldFdhbGxldC5TaW1w",
+            "bGVQYXkuU2ltcGxlUGF5Q29udGFjdBovLk15SmV0V2FsbGV0LlNpbXBsZVBh",
+            "eS5TaW1wbGVQYXlDb250YWN0UmVzcG9uc2USaQoNQ29udGFjdFVwZGF0ZRIn",
+            "Lk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlDb250YWN0Gi8uTXlK",
+            "ZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUNvbnRhY3RSZXNwb25zZRJO",
+            "Cg1Db250YWN0RGVsZXRlEiUuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBs",
+            "ZVBheUlkRHRvGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmgKDkNvbnRhY3RH",
+            "ZXRCeUlkEiUuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUlkRHRv",
             "Gi8uTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUNvbnRhY3RSZXNw",
-            "b25zZRJOCg1Db250YWN0RGVsZXRlEiUuTXlKZXRXYWxsZXQuU2ltcGxlUGF5",
-            "LlNpbXBsZVBheUlkRHRvGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmgKDkNv",
-            "bnRhY3RHZXRCeUlkEiUuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBh",
-            "eUlkRHRvGi8uTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUNvbnRh",
-            "Y3RSZXNwb25zZRJfChpDb250YWN0R2V0QWxsQ29udGFjdFN0cmVhbRIWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRonLk15SmV0V2FsbGV0LlNpbXBsZVBheS5T",
-            "aW1wbGVQYXlDb250YWN0MAFiBnByb3RvMw=="));
+            "b25zZRJ1ChpDb250YWN0R2V0QWxsQ29udGFjdFN0cmVhbRIsLk15SmV0V2Fs",
+            "bGV0LlNpbXBsZVBheS5TaW1wbGVQYXlXb3Jrc3BhY2VEdG8aJy5NeUpldFdh",
+            "bGxldC5TaW1wbGVQYXkuU2ltcGxlUGF5Q29udGFjdDABEnUKD1ZhbGlkYXRl",
+            "QWRkcmVzcxInLk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlBZGRy",
+            "ZXNzGjkuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheUFkZHJlc3NW",
+            "YWxpZGF0aW9uUmVzcG9uc2USgQEKFVNpbmdsZVRyYW5zZmVyUHJldmlldxIv",
+            "Lk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlUcmFuc2ZlclJlcXVl",
+            "c3QaNy5NeUpldFdhbGxldC5TaW1wbGVQYXkuU2ltcGxlUGF5VHJhbnNmZXJQ",
+            "cmV2aWV3UmVzcG9uc2USewoVU2luZ2xlVHJhbnNmZXJFeGVjdXRlEi8uTXlK",
+            "ZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheVRyYW5zZmVyUmVxdWVzdBox",
+            "Lk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlTdGF0ZW1lbnRSZXNw",
+            "b25zZRJsChBTdGF0ZW1lbnRHZXRCeUlkEiUuTXlKZXRXYWxsZXQuU2ltcGxl",
+            "UGF5LlNpbXBsZVBheUlkRHRvGjEuTXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNp",
+            "bXBsZVBheVN0YXRlbWVudFJlc3BvbnNlEnAKElN0YXRlbWVudEdldEJ5TmFt",
+            "ZRInLk15SmV0V2FsbGV0LlNpbXBsZVBheS5TaW1wbGVQYXlOYW1lRHRvGjEu",
+            "TXlKZXRXYWxsZXQuU2ltcGxlUGF5LlNpbXBsZVBheVN0YXRlbWVudFJlc3Bv",
+            "bnNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MyJetWallet.SimplePay.ResultCodes), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MyJetWallet.SimplePay.TransferStatus), typeof(global::MyJetWallet.SimplePay.ResultCodes), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.HelloMessage), global::MyJetWallet.SimplePay.HelloMessage.Parser, new[]{ "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayContact), global::MyJetWallet.SimplePay.SimplePayContact.Parser, new[]{ "Id", "Name", "GroupId", "Description", "AssetSymbol", "NetworkId", "BlockchainAddress", "BlockchainTag" }, new[]{ "GroupId", "Description", "BlockchainTag" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayContact), global::MyJetWallet.SimplePay.SimplePayContact.Parser, new[]{ "Id", "Name", "GroupId", "Description", "AssetSymbol", "NetworkId", "BlockchainAddress", "BlockchainTag", "Workspace" }, new[]{ "GroupId", "Description", "BlockchainTag" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayBlockchain), global::MyJetWallet.SimplePay.SimplePayBlockchain.Parser, new[]{ "NetworkId", "Name", "IsTagSupported" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAsset), global::MyJetWallet.SimplePay.SimplePayAsset.Parser, new[]{ "Symbol", "Name", "IconUrl", "Networks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAddress), global::MyJetWallet.SimplePay.SimplePayAddress.Parser, new[]{ "AssetSymbol", "NetworkId", "Address", "Tag" }, new[]{ "Tag" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayBalance), global::MyJetWallet.SimplePay.SimplePayBalance.Parser, new[]{ "AssetSymbol", "Balance" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayIdDto), global::MyJetWallet.SimplePay.SimplePayIdDto.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAssetAndNetworkDto), global::MyJetWallet.SimplePay.SimplePayAssetAndNetworkDto.Parser, new[]{ "AssetSymbol", "NetworkId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayTransfer), global::MyJetWallet.SimplePay.SimplePayTransfer.Parser, new[]{ "Id", "StatementName", "ContactId", "Comment", "Status", "AssetSymbol", "PaymentAmount", "FeeAmount", "TransactionAmount", "SettleAsset", "SettleAmount", "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayStatement), global::MyJetWallet.SimplePay.SimplePayStatement.Parser, new[]{ "Id", "Name", "Description", "CreatedTimestamp", "Status", "Transfers", "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayWorkspaceDto), global::MyJetWallet.SimplePay.SimplePayWorkspaceDto.Parser, new[]{ "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayIdDto), global::MyJetWallet.SimplePay.SimplePayIdDto.Parser, new[]{ "Id", "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayNameDto), global::MyJetWallet.SimplePay.SimplePayNameDto.Parser, new[]{ "Name", "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAssetAndNetworkDto), global::MyJetWallet.SimplePay.SimplePayAssetAndNetworkDto.Parser, new[]{ "AssetSymbol", "NetworkId", "Workspace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayTransferRequest), global::MyJetWallet.SimplePay.SimplePayTransferRequest.Parser, new[]{ "StatementName", "ContactId", "Comment", "AssetSymbol", "PaymentAmount", "TransactionAmount", "SettleAsset", "SettleAmount", "Workspace" }, new[]{ "PaymentAmount", "TransactionAmount", "SettleAsset", "SettleAmount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayWorkspaceCreateRequest), global::MyJetWallet.SimplePay.SimplePayWorkspaceCreateRequest.Parser, new[]{ "Workspace" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayResponse), global::MyJetWallet.SimplePay.SimplePayResponse.Parser, new[]{ "Result", "Message" }, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayContactResponse), global::MyJetWallet.SimplePay.SimplePayContactResponse.Parser, new[]{ "Result", "Message", "Contact" }, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayContactListResponse), global::MyJetWallet.SimplePay.SimplePayContactListResponse.Parser, new[]{ "Result", "Message", "Contacts" }, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAssetListResponse), global::MyJetWallet.SimplePay.SimplePayAssetListResponse.Parser, new[]{ "Result", "Message", "Contacts" }, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayBlockchainListResponse), global::MyJetWallet.SimplePay.SimplePayBlockchainListResponse.Parser, new[]{ "Result", "Message", "Contacts" }, new[]{ "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayBalanceListResponse), global::MyJetWallet.SimplePay.SimplePayBalanceListResponse.Parser, new[]{ "Result", "Message", "Contacts" }, new[]{ "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayBalanceListResponse), global::MyJetWallet.SimplePay.SimplePayBalanceListResponse.Parser, new[]{ "Result", "Message", "Contacts" }, new[]{ "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayAddressValidationResponse), global::MyJetWallet.SimplePay.SimplePayAddressValidationResponse.Parser, new[]{ "Result", "Message" }, new[]{ "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayTransferPreviewResponse), global::MyJetWallet.SimplePay.SimplePayTransferPreviewResponse.Parser, new[]{ "Result", "Message", "ContactId", "AssetSymbol", "PaymentAmount", "FeeAmount", "TransactionAmount", "SettleAsset", "SettleAmount" }, new[]{ "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MyJetWallet.SimplePay.SimplePayStatementResponse), global::MyJetWallet.SimplePay.SimplePayStatementResponse.Parser, new[]{ "Result", "Message", "Statement" }, new[]{ "Message" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
+  public enum TransferStatus {
+    [pbr::OriginalName("Draft")] Draft = 0,
+    [pbr::OriginalName("Pending")] Pending = 1,
+    [pbr::OriginalName("InProgress")] InProgress = 2,
+    [pbr::OriginalName("Completed")] Completed = 3,
+    [pbr::OriginalName("Cancelled")] Cancelled = 4,
+  }
+
   public enum ResultCodes {
-    [pbr::OriginalName("OK")] Ok = 0,
-    [pbr::OriginalName("B")] B = 1,
+    [pbr::OriginalName("Unauthorised")] Unauthorised = 0,
+    [pbr::OriginalName("OK")] Ok = 10,
+    [pbr::OriginalName("InvalidAddress")] InvalidAddress = 11,
+    [pbr::OriginalName("InvalidTag")] InvalidTag = 12,
+    [pbr::OriginalName("ContactNotFound")] ContactNotFound = 13,
+    [pbr::OriginalName("ContactGroupNotFound")] ContactGroupNotFound = 14,
+    [pbr::OriginalName("AssetNotFound")] AssetNotFound = 15,
+    [pbr::OriginalName("BlockchainNotFound")] BlockchainNotFound = 16,
+    [pbr::OriginalName("StatementAlreadyExists")] StatementAlreadyExists = 17,
   }
 
   #endregion
@@ -356,6 +439,7 @@ namespace MyJetWallet.SimplePay {
       networkId_ = other.networkId_;
       blockchainAddress_ = other.blockchainAddress_;
       blockchainTag_ = other.blockchainTag_;
+      workspace_ = other.workspace_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -503,6 +587,21 @@ namespace MyJetWallet.SimplePay {
       blockchainTag_ = null;
     }
 
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -526,6 +625,7 @@ namespace MyJetWallet.SimplePay {
       if (NetworkId != other.NetworkId) return false;
       if (BlockchainAddress != other.BlockchainAddress) return false;
       if (BlockchainTag != other.BlockchainTag) return false;
+      if (Workspace != other.Workspace) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -541,6 +641,7 @@ namespace MyJetWallet.SimplePay {
       if (NetworkId.Length != 0) hash ^= NetworkId.GetHashCode();
       if (BlockchainAddress.Length != 0) hash ^= BlockchainAddress.GetHashCode();
       if (HasBlockchainTag) hash ^= BlockchainTag.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -591,6 +692,10 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(66);
         output.WriteString(BlockchainTag);
       }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -633,6 +738,10 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(66);
         output.WriteString(BlockchainTag);
       }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -666,6 +775,9 @@ namespace MyJetWallet.SimplePay {
       }
       if (HasBlockchainTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BlockchainTag);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -702,6 +814,9 @@ namespace MyJetWallet.SimplePay {
       }
       if (other.HasBlockchainTag) {
         BlockchainTag = other.BlockchainTag;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -750,6 +865,10 @@ namespace MyJetWallet.SimplePay {
             BlockchainTag = input.ReadString();
             break;
           }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -795,6 +914,10 @@ namespace MyJetWallet.SimplePay {
           }
           case 66: {
             BlockchainTag = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
             break;
           }
         }
@@ -1913,16 +2036,16 @@ namespace MyJetWallet.SimplePay {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SimplePayIdDto : pb::IMessage<SimplePayIdDto>
+  public sealed partial class SimplePayTransfer : pb::IMessage<SimplePayTransfer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SimplePayIdDto> _parser = new pb::MessageParser<SimplePayIdDto>(() => new SimplePayIdDto());
+    private static readonly pb::MessageParser<SimplePayTransfer> _parser = new pb::MessageParser<SimplePayTransfer>(() => new SimplePayTransfer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SimplePayIdDto> Parser { get { return _parser; } }
+    public static pb::MessageParser<SimplePayTransfer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1938,7 +2061,7 @@ namespace MyJetWallet.SimplePay {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SimplePayIdDto() {
+    public SimplePayTransfer() {
       OnConstruction();
     }
 
@@ -1946,20 +2069,34 @@ namespace MyJetWallet.SimplePay {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SimplePayIdDto(SimplePayIdDto other) : this() {
+    public SimplePayTransfer(SimplePayTransfer other) : this() {
       id_ = other.id_;
+      statementName_ = other.statementName_;
+      contactId_ = other.contactId_;
+      comment_ = other.comment_;
+      status_ = other.status_;
+      assetSymbol_ = other.assetSymbol_;
+      paymentAmount_ = other.paymentAmount_;
+      feeAmount_ = other.feeAmount_;
+      transactionAmount_ = other.transactionAmount_;
+      settleAsset_ = other.settleAsset_;
+      settleAmount_ = other.settleAmount_;
+      workspace_ = other.workspace_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SimplePayIdDto Clone() {
-      return new SimplePayIdDto(this);
+    public SimplePayTransfer Clone() {
+      return new SimplePayTransfer(this);
     }
 
     /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// server-side unique id of the transfer
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -1969,15 +2106,180 @@ namespace MyJetWallet.SimplePay {
       }
     }
 
+    /// <summary>Field number for the "StatementName" field.</summary>
+    public const int StatementNameFieldNumber = 2;
+    private string statementName_ = "";
+    /// <summary>
+    /// client-side unique id of transfer. Will be use as settlement name
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as SimplePayIdDto);
+    public string StatementName {
+      get { return statementName_; }
+      set {
+        statementName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ContactId" field.</summary>
+    public const int ContactIdFieldNumber = 3;
+    private string contactId_ = "";
+    /// <summary>
+    /// receiver contact Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContactId {
+      get { return contactId_; }
+      set {
+        contactId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Comment" field.</summary>
+    public const int CommentFieldNumber = 4;
+    private string comment_ = "";
+    /// <summary>
+    /// comment for payment
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Comment {
+      get { return comment_; }
+      set {
+        comment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Status" field.</summary>
+    public const int StatusFieldNumber = 5;
+    private global::MyJetWallet.SimplePay.TransferStatus status_ = global::MyJetWallet.SimplePay.TransferStatus.Draft;
+    /// <summary>
+    /// status of the transfer
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.TransferStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AssetSymbol" field.</summary>
+    public const int AssetSymbolFieldNumber = 10;
+    private string assetSymbol_ = "";
+    /// <summary>
+    /// payment asset (should be same with contact billing asset)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssetSymbol {
+      get { return assetSymbol_; }
+      set {
+        assetSymbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PaymentAmount" field.</summary>
+    public const int PaymentAmountFieldNumber = 11;
+    private string paymentAmount_ = "";
+    /// <summary>
+    /// crypto total amount to pay
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PaymentAmount {
+      get { return paymentAmount_; }
+      set {
+        paymentAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "FeeAmount" field.</summary>
+    public const int FeeAmountFieldNumber = 12;
+    private string feeAmount_ = "";
+    /// <summary>
+    /// crypto fee amount
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeeAmount {
+      get { return feeAmount_; }
+      set {
+        feeAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "TransactionAmount" field.</summary>
+    public const int TransactionAmountFieldNumber = 13;
+    private string transactionAmount_ = "";
+    /// <summary>
+    /// crypto amount to send in transaction (after pay fee)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TransactionAmount {
+      get { return transactionAmount_; }
+      set {
+        transactionAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "SettleAsset" field.</summary>
+    public const int SettleAssetFieldNumber = 14;
+    private string settleAsset_ = "";
+    /// <summary>
+    /// asset that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAsset {
+      get { return settleAsset_; }
+      set {
+        settleAsset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "SettleAmount" field.</summary>
+    public const int SettleAmountFieldNumber = 15;
+    private string settleAmount_ = "";
+    /// <summary>
+    /// amount that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAmount {
+      get { return settleAmount_; }
+      set {
+        settleAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SimplePayIdDto other) {
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayTransfer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayTransfer other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1985,6 +2287,17 @@ namespace MyJetWallet.SimplePay {
         return true;
       }
       if (Id != other.Id) return false;
+      if (StatementName != other.StatementName) return false;
+      if (ContactId != other.ContactId) return false;
+      if (Comment != other.Comment) return false;
+      if (Status != other.Status) return false;
+      if (AssetSymbol != other.AssetSymbol) return false;
+      if (PaymentAmount != other.PaymentAmount) return false;
+      if (FeeAmount != other.FeeAmount) return false;
+      if (TransactionAmount != other.TransactionAmount) return false;
+      if (SettleAsset != other.SettleAsset) return false;
+      if (SettleAmount != other.SettleAmount) return false;
+      if (Workspace != other.Workspace) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1993,6 +2306,17 @@ namespace MyJetWallet.SimplePay {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (StatementName.Length != 0) hash ^= StatementName.GetHashCode();
+      if (ContactId.Length != 0) hash ^= ContactId.GetHashCode();
+      if (Comment.Length != 0) hash ^= Comment.GetHashCode();
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) hash ^= Status.GetHashCode();
+      if (AssetSymbol.Length != 0) hash ^= AssetSymbol.GetHashCode();
+      if (PaymentAmount.Length != 0) hash ^= PaymentAmount.GetHashCode();
+      if (FeeAmount.Length != 0) hash ^= FeeAmount.GetHashCode();
+      if (TransactionAmount.Length != 0) hash ^= TransactionAmount.GetHashCode();
+      if (SettleAsset.Length != 0) hash ^= SettleAsset.GetHashCode();
+      if (SettleAmount.Length != 0) hash ^= SettleAmount.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2015,6 +2339,50 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (StatementName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Comment);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2029,6 +2397,50 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (StatementName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Comment);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2042,6 +2454,39 @@ namespace MyJetWallet.SimplePay {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
+      if (StatementName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContactId);
+      }
+      if (Comment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Comment);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (AssetSymbol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2050,12 +2495,45 @@ namespace MyJetWallet.SimplePay {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SimplePayIdDto other) {
+    public void MergeFrom(SimplePayTransfer other) {
       if (other == null) {
         return;
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.StatementName.Length != 0) {
+        StatementName = other.StatementName;
+      }
+      if (other.ContactId.Length != 0) {
+        ContactId = other.ContactId;
+      }
+      if (other.Comment.Length != 0) {
+        Comment = other.Comment;
+      }
+      if (other.Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        Status = other.Status;
+      }
+      if (other.AssetSymbol.Length != 0) {
+        AssetSymbol = other.AssetSymbol;
+      }
+      if (other.PaymentAmount.Length != 0) {
+        PaymentAmount = other.PaymentAmount;
+      }
+      if (other.FeeAmount.Length != 0) {
+        FeeAmount = other.FeeAmount;
+      }
+      if (other.TransactionAmount.Length != 0) {
+        TransactionAmount = other.TransactionAmount;
+      }
+      if (other.SettleAsset.Length != 0) {
+        SettleAsset = other.SettleAsset;
+      }
+      if (other.SettleAmount.Length != 0) {
+        SettleAmount = other.SettleAmount;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2076,6 +2554,50 @@ namespace MyJetWallet.SimplePay {
             Id = input.ReadString();
             break;
           }
+          case 18: {
+            StatementName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ContactId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::MyJetWallet.SimplePay.TransferStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 98: {
+            FeeAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2093,6 +2615,1122 @@ namespace MyJetWallet.SimplePay {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            StatementName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ContactId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::MyJetWallet.SimplePay.TransferStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 98: {
+            FeeAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayStatement : pb::IMessage<SimplePayStatement>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayStatement> _parser = new pb::MessageParser<SimplePayStatement>(() => new SimplePayStatement());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayStatement> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatement() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatement(SimplePayStatement other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      description_ = other.description_;
+      createdTimestamp_ = other.createdTimestamp_;
+      status_ = other.status_;
+      transfers_ = other.transfers_.Clone();
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatement Clone() {
+      return new SimplePayStatement(this);
+    }
+
+    /// <summary>Field number for the "Id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// server-side unique id of the statement
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// client-side unique id/name of the statement
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// description of the statement
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CreatedTimestamp" field.</summary>
+    public const int CreatedTimestampFieldNumber = 4;
+    private string createdTimestamp_ = "";
+    /// <summary>
+    /// timestamp of the statement creation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreatedTimestamp {
+      get { return createdTimestamp_; }
+      set {
+        createdTimestamp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Status" field.</summary>
+    public const int StatusFieldNumber = 5;
+    private global::MyJetWallet.SimplePay.TransferStatus status_ = global::MyJetWallet.SimplePay.TransferStatus.Draft;
+    /// <summary>
+    /// status of the statement and transfers
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.TransferStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Transfers" field.</summary>
+    public const int TransfersFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::MyJetWallet.SimplePay.SimplePayTransfer> _repeated_transfers_codec
+        = pb::FieldCodec.ForMessage(82, global::MyJetWallet.SimplePay.SimplePayTransfer.Parser);
+    private readonly pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayTransfer> transfers_ = new pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayTransfer>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayTransfer> Transfers {
+      get { return transfers_; }
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request  
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayStatement);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayStatement other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      if (Description != other.Description) return false;
+      if (CreatedTimestamp != other.CreatedTimestamp) return false;
+      if (Status != other.Status) return false;
+      if(!transfers_.Equals(other.transfers_)) return false;
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (CreatedTimestamp.Length != 0) hash ^= CreatedTimestamp.GetHashCode();
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) hash ^= Status.GetHashCode();
+      hash ^= transfers_.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (CreatedTimestamp.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CreatedTimestamp);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      transfers_.WriteTo(output, _repeated_transfers_codec);
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (CreatedTimestamp.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CreatedTimestamp);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      transfers_.WriteTo(ref output, _repeated_transfers_codec);
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (CreatedTimestamp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedTimestamp);
+      }
+      if (Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      size += transfers_.CalculateSize(_repeated_transfers_codec);
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayStatement other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.CreatedTimestamp.Length != 0) {
+        CreatedTimestamp = other.CreatedTimestamp;
+      }
+      if (other.Status != global::MyJetWallet.SimplePay.TransferStatus.Draft) {
+        Status = other.Status;
+      }
+      transfers_.Add(other.transfers_);
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            CreatedTimestamp = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::MyJetWallet.SimplePay.TransferStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            transfers_.AddEntriesFrom(input, _repeated_transfers_codec);
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            CreatedTimestamp = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::MyJetWallet.SimplePay.TransferStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            transfers_.AddEntriesFrom(ref input, _repeated_transfers_codec);
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayWorkspaceDto : pb::IMessage<SimplePayWorkspaceDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayWorkspaceDto> _parser = new pb::MessageParser<SimplePayWorkspaceDto>(() => new SimplePayWorkspaceDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayWorkspaceDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceDto(SimplePayWorkspaceDto other) : this() {
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceDto Clone() {
+      return new SimplePayWorkspaceDto(this);
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayWorkspaceDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayWorkspaceDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayWorkspaceDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayIdDto : pb::IMessage<SimplePayIdDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayIdDto> _parser = new pb::MessageParser<SimplePayIdDto>(() => new SimplePayIdDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayIdDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayIdDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayIdDto(SimplePayIdDto other) : this() {
+      id_ = other.id_;
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayIdDto Clone() {
+      return new SimplePayIdDto(this);
+    }
+
+    /// <summary>Field number for the "Id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayIdDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayIdDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayIdDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayNameDto : pb::IMessage<SimplePayNameDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayNameDto> _parser = new pb::MessageParser<SimplePayNameDto>(() => new SimplePayNameDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayNameDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayNameDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayNameDto(SimplePayNameDto other) : this() {
+      name_ = other.name_;
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayNameDto Clone() {
+      return new SimplePayNameDto(this);
+    }
+
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayNameDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayNameDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayNameDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
             break;
           }
         }
@@ -2117,7 +3755,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2139,6 +3777,7 @@ namespace MyJetWallet.SimplePay {
     public SimplePayAssetAndNetworkDto(SimplePayAssetAndNetworkDto other) : this() {
       assetSymbol_ = other.assetSymbol_;
       networkId_ = other.networkId_;
+      workspace_ = other.workspace_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2172,6 +3811,21 @@ namespace MyJetWallet.SimplePay {
       }
     }
 
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2189,6 +3843,7 @@ namespace MyJetWallet.SimplePay {
       }
       if (AssetSymbol != other.AssetSymbol) return false;
       if (NetworkId != other.NetworkId) return false;
+      if (Workspace != other.Workspace) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2198,6 +3853,7 @@ namespace MyJetWallet.SimplePay {
       int hash = 1;
       if (AssetSymbol.Length != 0) hash ^= AssetSymbol.GetHashCode();
       if (NetworkId.Length != 0) hash ^= NetworkId.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2224,6 +3880,10 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(18);
         output.WriteString(NetworkId);
       }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2242,6 +3902,10 @@ namespace MyJetWallet.SimplePay {
         output.WriteRawTag(18);
         output.WriteString(NetworkId);
       }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2257,6 +3921,9 @@ namespace MyJetWallet.SimplePay {
       }
       if (NetworkId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkId);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2275,6 +3942,9 @@ namespace MyJetWallet.SimplePay {
       }
       if (other.NetworkId.Length != 0) {
         NetworkId = other.NetworkId;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2297,6 +3967,10 @@ namespace MyJetWallet.SimplePay {
           }
           case 18: {
             NetworkId = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
             break;
           }
         }
@@ -2322,6 +3996,772 @@ namespace MyJetWallet.SimplePay {
             NetworkId = input.ReadString();
             break;
           }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayTransferRequest : pb::IMessage<SimplePayTransferRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayTransferRequest> _parser = new pb::MessageParser<SimplePayTransferRequest>(() => new SimplePayTransferRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayTransferRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferRequest(SimplePayTransferRequest other) : this() {
+      statementName_ = other.statementName_;
+      contactId_ = other.contactId_;
+      comment_ = other.comment_;
+      assetSymbol_ = other.assetSymbol_;
+      paymentAmount_ = other.paymentAmount_;
+      transactionAmount_ = other.transactionAmount_;
+      settleAsset_ = other.settleAsset_;
+      settleAmount_ = other.settleAmount_;
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferRequest Clone() {
+      return new SimplePayTransferRequest(this);
+    }
+
+    /// <summary>Field number for the "StatementName" field.</summary>
+    public const int StatementNameFieldNumber = 2;
+    private string statementName_ = "";
+    /// <summary>
+    /// client-side unique id of transfer. Will be use as settlement name
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StatementName {
+      get { return statementName_; }
+      set {
+        statementName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ContactId" field.</summary>
+    public const int ContactIdFieldNumber = 3;
+    private string contactId_ = "";
+    /// <summary>
+    /// receiver contact Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContactId {
+      get { return contactId_; }
+      set {
+        contactId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Comment" field.</summary>
+    public const int CommentFieldNumber = 4;
+    private string comment_ = "";
+    /// <summary>
+    /// comment for payment
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Comment {
+      get { return comment_; }
+      set {
+        comment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "AssetSymbol" field.</summary>
+    public const int AssetSymbolFieldNumber = 10;
+    private string assetSymbol_ = "";
+    /// <summary>
+    /// payment asset (should be same with contact billing asset)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssetSymbol {
+      get { return assetSymbol_; }
+      set {
+        assetSymbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PaymentAmount" field.</summary>
+    public const int PaymentAmountFieldNumber = 11;
+    private readonly static string PaymentAmountDefaultValue = "";
+
+    private string paymentAmount_;
+    /// <summary>
+    /// specify one of the following fields to define Amount of the payment
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PaymentAmount {
+      get { return paymentAmount_ ?? PaymentAmountDefaultValue; }
+      set {
+        paymentAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "PaymentAmount" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPaymentAmount {
+      get { return paymentAmount_ != null; }
+    }
+    /// <summary>Clears the value of the "PaymentAmount" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPaymentAmount() {
+      paymentAmount_ = null;
+    }
+
+    /// <summary>Field number for the "TransactionAmount" field.</summary>
+    public const int TransactionAmountFieldNumber = 13;
+    private readonly static string TransactionAmountDefaultValue = "";
+
+    private string transactionAmount_;
+    /// <summary>
+    /// crypto amount to send in transaction (after pay fee)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TransactionAmount {
+      get { return transactionAmount_ ?? TransactionAmountDefaultValue; }
+      set {
+        transactionAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "TransactionAmount" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransactionAmount {
+      get { return transactionAmount_ != null; }
+    }
+    /// <summary>Clears the value of the "TransactionAmount" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransactionAmount() {
+      transactionAmount_ = null;
+    }
+
+    /// <summary>Field number for the "SettleAsset" field.</summary>
+    public const int SettleAssetFieldNumber = 14;
+    private readonly static string SettleAssetDefaultValue = "";
+
+    private string settleAsset_;
+    /// <summary>
+    /// asset that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAsset {
+      get { return settleAsset_ ?? SettleAssetDefaultValue; }
+      set {
+        settleAsset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "SettleAsset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSettleAsset {
+      get { return settleAsset_ != null; }
+    }
+    /// <summary>Clears the value of the "SettleAsset" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSettleAsset() {
+      settleAsset_ = null;
+    }
+
+    /// <summary>Field number for the "SettleAmount" field.</summary>
+    public const int SettleAmountFieldNumber = 15;
+    private readonly static string SettleAmountDefaultValue = "";
+
+    private string settleAmount_;
+    /// <summary>
+    /// amount that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAmount {
+      get { return settleAmount_ ?? SettleAmountDefaultValue; }
+      set {
+        settleAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "SettleAmount" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSettleAmount {
+      get { return settleAmount_ != null; }
+    }
+    /// <summary>Clears the value of the "SettleAmount" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSettleAmount() {
+      settleAmount_ = null;
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayTransferRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayTransferRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StatementName != other.StatementName) return false;
+      if (ContactId != other.ContactId) return false;
+      if (Comment != other.Comment) return false;
+      if (AssetSymbol != other.AssetSymbol) return false;
+      if (PaymentAmount != other.PaymentAmount) return false;
+      if (TransactionAmount != other.TransactionAmount) return false;
+      if (SettleAsset != other.SettleAsset) return false;
+      if (SettleAmount != other.SettleAmount) return false;
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StatementName.Length != 0) hash ^= StatementName.GetHashCode();
+      if (ContactId.Length != 0) hash ^= ContactId.GetHashCode();
+      if (Comment.Length != 0) hash ^= Comment.GetHashCode();
+      if (AssetSymbol.Length != 0) hash ^= AssetSymbol.GetHashCode();
+      if (HasPaymentAmount) hash ^= PaymentAmount.GetHashCode();
+      if (HasTransactionAmount) hash ^= TransactionAmount.GetHashCode();
+      if (HasSettleAsset) hash ^= SettleAsset.GetHashCode();
+      if (HasSettleAmount) hash ^= SettleAmount.GetHashCode();
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (StatementName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Comment);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (HasPaymentAmount) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (HasTransactionAmount) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (HasSettleAsset) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (HasSettleAmount) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StatementName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Comment);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (HasPaymentAmount) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (HasTransactionAmount) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (HasSettleAsset) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (HasSettleAmount) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (StatementName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StatementName);
+      }
+      if (ContactId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContactId);
+      }
+      if (Comment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Comment);
+      }
+      if (AssetSymbol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetSymbol);
+      }
+      if (HasPaymentAmount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAmount);
+      }
+      if (HasTransactionAmount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TransactionAmount);
+      }
+      if (HasSettleAsset) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAsset);
+      }
+      if (HasSettleAmount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAmount);
+      }
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayTransferRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StatementName.Length != 0) {
+        StatementName = other.StatementName;
+      }
+      if (other.ContactId.Length != 0) {
+        ContactId = other.ContactId;
+      }
+      if (other.Comment.Length != 0) {
+        Comment = other.Comment;
+      }
+      if (other.AssetSymbol.Length != 0) {
+        AssetSymbol = other.AssetSymbol;
+      }
+      if (other.HasPaymentAmount) {
+        PaymentAmount = other.PaymentAmount;
+      }
+      if (other.HasTransactionAmount) {
+        TransactionAmount = other.TransactionAmount;
+      }
+      if (other.HasSettleAsset) {
+        SettleAsset = other.SettleAsset;
+      }
+      if (other.HasSettleAmount) {
+        SettleAmount = other.SettleAmount;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            StatementName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ContactId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            StatementName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ContactId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayWorkspaceCreateRequest : pb::IMessage<SimplePayWorkspaceCreateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayWorkspaceCreateRequest> _parser = new pb::MessageParser<SimplePayWorkspaceCreateRequest>(() => new SimplePayWorkspaceCreateRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayWorkspaceCreateRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceCreateRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceCreateRequest(SimplePayWorkspaceCreateRequest other) : this() {
+      workspace_ = other.workspace_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayWorkspaceCreateRequest Clone() {
+      return new SimplePayWorkspaceCreateRequest(this);
+    }
+
+    /// <summary>Field number for the "Workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 100;
+    private string workspace_ = "";
+    /// <summary>
+    /// identify workspace id for request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayWorkspaceCreateRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayWorkspaceCreateRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Workspace != other.Workspace) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Workspace);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Workspace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayWorkspaceCreateRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 802: {
+            Workspace = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2344,7 +4784,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2376,8 +4816,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -2388,7 +4828,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -2437,7 +4877,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2457,12 +4897,12 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
       if (_unknownFields != null) {
@@ -2475,12 +4915,12 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
       if (_unknownFields != null) {
@@ -2493,11 +4933,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2511,7 +4951,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -2532,11 +4972,11 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
             break;
           }
@@ -2555,11 +4995,11 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
             break;
           }
@@ -2585,7 +5025,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2618,8 +5058,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -2630,7 +5070,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -2656,7 +5096,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Contact" field.</summary>
-    public const int ContactFieldNumber = 3;
+    public const int ContactFieldNumber = 1;
     private global::MyJetWallet.SimplePay.SimplePayContact contact_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2692,7 +5132,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       if (contact_ != null) hash ^= Contact.GetHashCode();
       if (_unknownFields != null) {
@@ -2713,17 +5153,17 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      if (contact_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Contact);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
-      }
-      if (contact_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Contact);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2735,17 +5175,17 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      if (contact_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Contact);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
-      }
-      if (contact_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Contact);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2757,11 +5197,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (contact_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contact);
@@ -2778,7 +5218,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -2805,19 +5245,19 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            Message = input.ReadString();
-            break;
-          }
-          case 26: {
+          case 10: {
             if (contact_ == null) {
               Contact = new global::MyJetWallet.SimplePay.SimplePayContact();
             }
             input.ReadMessage(Contact);
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
             break;
           }
         }
@@ -2835,19 +5275,19 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            Message = input.ReadString();
-            break;
-          }
-          case 26: {
+          case 10: {
             if (contact_ == null) {
               Contact = new global::MyJetWallet.SimplePay.SimplePayContact();
             }
             input.ReadMessage(Contact);
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
             break;
           }
         }
@@ -2872,7 +5312,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[10]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2905,8 +5345,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -2917,7 +5357,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -2943,9 +5383,9 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Contacts" field.</summary>
-    public const int ContactsFieldNumber = 3;
+    public const int ContactsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::MyJetWallet.SimplePay.SimplePayContact> _repeated_contacts_codec
-        = pb::FieldCodec.ForMessage(26, global::MyJetWallet.SimplePay.SimplePayContact.Parser);
+        = pb::FieldCodec.ForMessage(10, global::MyJetWallet.SimplePay.SimplePayContact.Parser);
     private readonly pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayContact> contacts_ = new pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayContact>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2978,7 +5418,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       hash ^= contacts_.GetHashCode();
       if (_unknownFields != null) {
@@ -2999,15 +5439,15 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3018,15 +5458,15 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(ref output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(ref output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3037,11 +5477,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       size += contacts_.CalculateSize(_repeated_contacts_codec);
       if (_unknownFields != null) {
@@ -3056,7 +5496,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -3078,16 +5518,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3105,16 +5545,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3139,7 +5579,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[11]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3172,8 +5612,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -3184,7 +5624,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -3210,9 +5650,9 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Contacts" field.</summary>
-    public const int ContactsFieldNumber = 3;
+    public const int ContactsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::MyJetWallet.SimplePay.SimplePayAsset> _repeated_contacts_codec
-        = pb::FieldCodec.ForMessage(26, global::MyJetWallet.SimplePay.SimplePayAsset.Parser);
+        = pb::FieldCodec.ForMessage(10, global::MyJetWallet.SimplePay.SimplePayAsset.Parser);
     private readonly pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayAsset> contacts_ = new pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayAsset>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3245,7 +5685,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       hash ^= contacts_.GetHashCode();
       if (_unknownFields != null) {
@@ -3266,15 +5706,15 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3285,15 +5725,15 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(ref output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(ref output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3304,11 +5744,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       size += contacts_.CalculateSize(_repeated_contacts_codec);
       if (_unknownFields != null) {
@@ -3323,7 +5763,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -3345,16 +5785,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3372,16 +5812,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3406,7 +5846,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[12]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3439,8 +5879,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -3451,7 +5891,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -3477,9 +5917,9 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Contacts" field.</summary>
-    public const int ContactsFieldNumber = 3;
+    public const int ContactsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::MyJetWallet.SimplePay.SimplePayBlockchain> _repeated_contacts_codec
-        = pb::FieldCodec.ForMessage(26, global::MyJetWallet.SimplePay.SimplePayBlockchain.Parser);
+        = pb::FieldCodec.ForMessage(10, global::MyJetWallet.SimplePay.SimplePayBlockchain.Parser);
     private readonly pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayBlockchain> contacts_ = new pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayBlockchain>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3512,7 +5952,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       hash ^= contacts_.GetHashCode();
       if (_unknownFields != null) {
@@ -3533,15 +5973,15 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3552,15 +5992,15 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(ref output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(ref output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3571,11 +6011,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       size += contacts_.CalculateSize(_repeated_contacts_codec);
       if (_unknownFields != null) {
@@ -3590,7 +6030,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -3612,16 +6052,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3639,16 +6079,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3673,7 +6113,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[13]; }
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3706,8 +6146,8 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Ok;
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::MyJetWallet.SimplePay.ResultCodes Result {
@@ -3718,7 +6158,7 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int MessageFieldNumber = 2;
+    public const int MessageFieldNumber = 1002;
     private readonly static string MessageDefaultValue = "";
 
     private string message_;
@@ -3744,9 +6184,9 @@ namespace MyJetWallet.SimplePay {
     }
 
     /// <summary>Field number for the "Contacts" field.</summary>
-    public const int ContactsFieldNumber = 3;
+    public const int ContactsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::MyJetWallet.SimplePay.SimplePayBalance> _repeated_contacts_codec
-        = pb::FieldCodec.ForMessage(26, global::MyJetWallet.SimplePay.SimplePayBalance.Parser);
+        = pb::FieldCodec.ForMessage(10, global::MyJetWallet.SimplePay.SimplePayBalance.Parser);
     private readonly pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayBalance> contacts_ = new pbc::RepeatedField<global::MyJetWallet.SimplePay.SimplePayBalance>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3779,7 +6219,7 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) hash ^= Result.GetHashCode();
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
       if (HasMessage) hash ^= Message.GetHashCode();
       hash ^= contacts_.GetHashCode();
       if (_unknownFields != null) {
@@ -3800,15 +6240,15 @@ namespace MyJetWallet.SimplePay {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3819,15 +6259,15 @@ namespace MyJetWallet.SimplePay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        output.WriteRawTag(8);
+      contacts_.WriteTo(ref output, _repeated_contacts_codec);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
         output.WriteEnum((int) Result);
       }
       if (HasMessage) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(210, 62);
         output.WriteString(Message);
       }
-      contacts_.WriteTo(ref output, _repeated_contacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3838,11 +6278,11 @@ namespace MyJetWallet.SimplePay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
       if (HasMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       size += contacts_.CalculateSize(_repeated_contacts_codec);
       if (_unknownFields != null) {
@@ -3857,7 +6297,7 @@ namespace MyJetWallet.SimplePay {
       if (other == null) {
         return;
       }
-      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Ok) {
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
         Result = other.Result;
       }
       if (other.HasMessage) {
@@ -3879,16 +6319,16 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
-            break;
-          }
-          case 26: {
-            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
             break;
           }
         }
@@ -3906,16 +6346,1065 @@ namespace MyJetWallet.SimplePay {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            break;
+          }
+          case 8008: {
             Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 8018: {
             Message = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayAddressValidationResponse : pb::IMessage<SimplePayAddressValidationResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayAddressValidationResponse> _parser = new pb::MessageParser<SimplePayAddressValidationResponse>(() => new SimplePayAddressValidationResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayAddressValidationResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayAddressValidationResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayAddressValidationResponse(SimplePayAddressValidationResponse other) : this() {
+      result_ = other.result_;
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayAddressValidationResponse Clone() {
+      return new SimplePayAddressValidationResponse(this);
+    }
+
+    /// <summary>Field number for the "Result" field.</summary>
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.ResultCodes Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Message" field.</summary>
+    public const int MessageFieldNumber = 1002;
+    private readonly static string MessageDefaultValue = "";
+
+    private string message_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_ ?? MessageDefaultValue; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "Message" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMessage {
+      get { return message_ != null; }
+    }
+    /// <summary>Clears the value of the "Message" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMessage() {
+      message_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayAddressValidationResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayAddressValidationResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
+      if (HasMessage) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      }
+      if (HasMessage) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayAddressValidationResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        Result = other.Result;
+      }
+      if (other.HasMessage) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayTransferPreviewResponse : pb::IMessage<SimplePayTransferPreviewResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayTransferPreviewResponse> _parser = new pb::MessageParser<SimplePayTransferPreviewResponse>(() => new SimplePayTransferPreviewResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayTransferPreviewResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferPreviewResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferPreviewResponse(SimplePayTransferPreviewResponse other) : this() {
+      result_ = other.result_;
+      message_ = other.message_;
+      contactId_ = other.contactId_;
+      assetSymbol_ = other.assetSymbol_;
+      paymentAmount_ = other.paymentAmount_;
+      feeAmount_ = other.feeAmount_;
+      transactionAmount_ = other.transactionAmount_;
+      settleAsset_ = other.settleAsset_;
+      settleAmount_ = other.settleAmount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayTransferPreviewResponse Clone() {
+      return new SimplePayTransferPreviewResponse(this);
+    }
+
+    /// <summary>Field number for the "Result" field.</summary>
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.ResultCodes Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Message" field.</summary>
+    public const int MessageFieldNumber = 1002;
+    private readonly static string MessageDefaultValue = "";
+
+    private string message_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_ ?? MessageDefaultValue; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "Message" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMessage {
+      get { return message_ != null; }
+    }
+    /// <summary>Clears the value of the "Message" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMessage() {
+      message_ = null;
+    }
+
+    /// <summary>Field number for the "ContactId" field.</summary>
+    public const int ContactIdFieldNumber = 3;
+    private string contactId_ = "";
+    /// <summary>
+    /// receiver contact Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContactId {
+      get { return contactId_; }
+      set {
+        contactId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "AssetSymbol" field.</summary>
+    public const int AssetSymbolFieldNumber = 10;
+    private string assetSymbol_ = "";
+    /// <summary>
+    /// payment asset (should be same with contact billing asset)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssetSymbol {
+      get { return assetSymbol_; }
+      set {
+        assetSymbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PaymentAmount" field.</summary>
+    public const int PaymentAmountFieldNumber = 11;
+    private string paymentAmount_ = "";
+    /// <summary>
+    /// crypto total amount to pay
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PaymentAmount {
+      get { return paymentAmount_; }
+      set {
+        paymentAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "FeeAmount" field.</summary>
+    public const int FeeAmountFieldNumber = 12;
+    private string feeAmount_ = "";
+    /// <summary>
+    /// crypto fee amount
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeeAmount {
+      get { return feeAmount_; }
+      set {
+        feeAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "TransactionAmount" field.</summary>
+    public const int TransactionAmountFieldNumber = 13;
+    private string transactionAmount_ = "";
+    /// <summary>
+    /// crypto amount to send in transaction (after pay fee)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TransactionAmount {
+      get { return transactionAmount_; }
+      set {
+        transactionAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "SettleAsset" field.</summary>
+    public const int SettleAssetFieldNumber = 14;
+    private string settleAsset_ = "";
+    /// <summary>
+    /// asset that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAsset {
+      get { return settleAsset_; }
+      set {
+        settleAsset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "SettleAmount" field.</summary>
+    public const int SettleAmountFieldNumber = 15;
+    private string settleAmount_ = "";
+    /// <summary>
+    /// amount that will be delivered to the recipient
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SettleAmount {
+      get { return settleAmount_; }
+      set {
+        settleAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayTransferPreviewResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayTransferPreviewResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      if (Message != other.Message) return false;
+      if (ContactId != other.ContactId) return false;
+      if (AssetSymbol != other.AssetSymbol) return false;
+      if (PaymentAmount != other.PaymentAmount) return false;
+      if (FeeAmount != other.FeeAmount) return false;
+      if (TransactionAmount != other.TransactionAmount) return false;
+      if (SettleAsset != other.SettleAsset) return false;
+      if (SettleAmount != other.SettleAmount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
+      if (HasMessage) hash ^= Message.GetHashCode();
+      if (ContactId.Length != 0) hash ^= ContactId.GetHashCode();
+      if (AssetSymbol.Length != 0) hash ^= AssetSymbol.GetHashCode();
+      if (PaymentAmount.Length != 0) hash ^= PaymentAmount.GetHashCode();
+      if (FeeAmount.Length != 0) hash ^= FeeAmount.GetHashCode();
+      if (TransactionAmount.Length != 0) hash ^= TransactionAmount.GetHashCode();
+      if (SettleAsset.Length != 0) hash ^= SettleAsset.GetHashCode();
+      if (SettleAmount.Length != 0) hash ^= SettleAmount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ContactId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ContactId);
+      }
+      if (AssetSymbol.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(SettleAmount);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      }
+      if (HasMessage) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (ContactId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContactId);
+      }
+      if (AssetSymbol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetSymbol);
+      }
+      if (PaymentAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PaymentAmount);
+      }
+      if (FeeAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeeAmount);
+      }
+      if (TransactionAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TransactionAmount);
+      }
+      if (SettleAsset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAsset);
+      }
+      if (SettleAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SettleAmount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayTransferPreviewResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        Result = other.Result;
+      }
+      if (other.HasMessage) {
+        Message = other.Message;
+      }
+      if (other.ContactId.Length != 0) {
+        ContactId = other.ContactId;
+      }
+      if (other.AssetSymbol.Length != 0) {
+        AssetSymbol = other.AssetSymbol;
+      }
+      if (other.PaymentAmount.Length != 0) {
+        PaymentAmount = other.PaymentAmount;
+      }
+      if (other.FeeAmount.Length != 0) {
+        FeeAmount = other.FeeAmount;
+      }
+      if (other.TransactionAmount.Length != 0) {
+        TransactionAmount = other.TransactionAmount;
+      }
+      if (other.SettleAsset.Length != 0) {
+        SettleAsset = other.SettleAsset;
+      }
+      if (other.SettleAmount.Length != 0) {
+        SettleAmount = other.SettleAmount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
           case 26: {
-            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            ContactId = input.ReadString();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 98: {
+            FeeAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            ContactId = input.ReadString();
+            break;
+          }
+          case 82: {
+            AssetSymbol = input.ReadString();
+            break;
+          }
+          case 90: {
+            PaymentAmount = input.ReadString();
+            break;
+          }
+          case 98: {
+            FeeAmount = input.ReadString();
+            break;
+          }
+          case 106: {
+            TransactionAmount = input.ReadString();
+            break;
+          }
+          case 114: {
+            SettleAsset = input.ReadString();
+            break;
+          }
+          case 122: {
+            SettleAmount = input.ReadString();
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SimplePayStatementResponse : pb::IMessage<SimplePayStatementResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SimplePayStatementResponse> _parser = new pb::MessageParser<SimplePayStatementResponse>(() => new SimplePayStatementResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SimplePayStatementResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MyJetWallet.SimplePay.SimplepayReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatementResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatementResponse(SimplePayStatementResponse other) : this() {
+      result_ = other.result_;
+      message_ = other.message_;
+      statement_ = other.statement_ != null ? other.statement_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SimplePayStatementResponse Clone() {
+      return new SimplePayStatementResponse(this);
+    }
+
+    /// <summary>Field number for the "Result" field.</summary>
+    public const int ResultFieldNumber = 1001;
+    private global::MyJetWallet.SimplePay.ResultCodes result_ = global::MyJetWallet.SimplePay.ResultCodes.Unauthorised;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.ResultCodes Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Message" field.</summary>
+    public const int MessageFieldNumber = 1002;
+    private readonly static string MessageDefaultValue = "";
+
+    private string message_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_ ?? MessageDefaultValue; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "Message" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMessage {
+      get { return message_ != null; }
+    }
+    /// <summary>Clears the value of the "Message" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMessage() {
+      message_ = null;
+    }
+
+    /// <summary>Field number for the "Statement" field.</summary>
+    public const int StatementFieldNumber = 1;
+    private global::MyJetWallet.SimplePay.SimplePayStatement statement_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::MyJetWallet.SimplePay.SimplePayStatement Statement {
+      get { return statement_; }
+      set {
+        statement_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SimplePayStatementResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SimplePayStatementResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      if (Message != other.Message) return false;
+      if (!object.Equals(Statement, other.Statement)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) hash ^= Result.GetHashCode();
+      if (HasMessage) hash ^= Message.GetHashCode();
+      if (statement_ != null) hash ^= Statement.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (statement_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Statement);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (statement_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Statement);
+      }
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        output.WriteRawTag(200, 62);
+        output.WriteEnum((int) Result);
+      }
+      if (HasMessage) {
+        output.WriteRawTag(210, 62);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      }
+      if (HasMessage) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (statement_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Statement);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SimplePayStatementResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result != global::MyJetWallet.SimplePay.ResultCodes.Unauthorised) {
+        Result = other.Result;
+      }
+      if (other.HasMessage) {
+        Message = other.Message;
+      }
+      if (other.statement_ != null) {
+        if (statement_ == null) {
+          Statement = new global::MyJetWallet.SimplePay.SimplePayStatement();
+        }
+        Statement.MergeFrom(other.Statement);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (statement_ == null) {
+              Statement = new global::MyJetWallet.SimplePay.SimplePayStatement();
+            }
+            input.ReadMessage(Statement);
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (statement_ == null) {
+              Statement = new global::MyJetWallet.SimplePay.SimplePayStatement();
+            }
+            input.ReadMessage(Statement);
+            break;
+          }
+          case 8008: {
+            Result = (global::MyJetWallet.SimplePay.ResultCodes) input.ReadEnum();
+            break;
+          }
+          case 8018: {
+            Message = input.ReadString();
             break;
           }
         }

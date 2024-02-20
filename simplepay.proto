@@ -112,7 +112,7 @@ message SimplePayStatement
  * ====================================================
  */
 
-message SimplePayWorkspaceDto
+message SimplePayWorkspaceDto // workspace id request
 {
   string Workspace = 100;           // identify workspace id for request
 }
@@ -265,8 +265,8 @@ message SimplePayStatementResponse
 
 service SimplePayClientGrpc {
 
-  rpc Hello (HelloMessage) returns (HelloMessage);
-  rpc Notify (HelloMessage) returns (.google.protobuf.Empty);
+  rpc Hello (HelloMessage) returns (HelloMessage);  // check the connection
+  rpc WhoIAm (.google.protobuf.Empty) returns (SimplePayResponse); // check the connection and authentication
 
   rpc DictionaryGetAllAssets(.google.protobuf.Empty) returns (SimplePayAssetListResponse); // get all assets
   rpc DictionaryGetAllBlockchains(.google.protobuf.Empty) returns (SimplePayBlockchainListResponse); // get all blockchains

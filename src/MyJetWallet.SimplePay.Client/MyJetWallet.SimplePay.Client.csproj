@@ -4,6 +4,12 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>MyJetWallet.SimplePay.Client</PackageId>
+        <Authors>MyJetWallet</Authors>
+        <Company>MyJetWallet</Company>
+        <Product>MyJetWallet</Product>
+        <PackageProjectUrl>https://github.com/MyJetWallet/MyJetWallet.SimplePay.Client</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/MyJetWallet/MyJetWallet.SimplePay.Client</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

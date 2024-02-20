@@ -7,13 +7,8 @@ public static partial class SimplePayClientGrpc
 {
     public partial class SimplePayClientGrpcClient
     {
-        public string Test() { return "Test"; }
+        
     }
-}
-
-public interface ISimplePayApi
-{
-
 }
 
 
