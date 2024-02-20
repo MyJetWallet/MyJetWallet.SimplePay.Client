@@ -157,6 +157,11 @@ message SimplePayTransferRequest
   string Workspace = 100;           // identify workspace id for request
 }
 
+message SimplePayWorkspaceCreateRequest
+{
+  string Workspace = 100;           // identify workspace id for request
+}
+
 
 /*
  * ====================================================
@@ -165,14 +170,16 @@ message SimplePayTransferRequest
  */
 
 enum ResultCodes {
-  OK = 0;
-  InvalidAddress = 1;
-  InvalidTag = 2;
-  ContactNotFound = 3;
-  ContactGroupNotFound = 4;
-  AssetNotFound = 5;
-  BlockchainNotFound = 6;
-  StatementAlreadyExists = 7;
+  Unauthorised = 0;
+  
+  OK = 10;
+  InvalidAddress = 11;
+  InvalidTag = 12;
+  ContactNotFound = 13;
+  ContactGroupNotFound = 14;
+  AssetNotFound = 15;
+  BlockchainNotFound = 16;
+  StatementAlreadyExists = 17;
 }
 
 message SimplePayResponse
@@ -264,7 +271,8 @@ service SimplePayClientGrpc {
   rpc DictionaryGetAllAssets(.google.protobuf.Empty) returns (SimplePayAssetListResponse); // get all assets
   rpc DictionaryGetAllBlockchains(.google.protobuf.Empty) returns (SimplePayBlockchainListResponse); // get all blockchains
   
-  rpc CreateNewWorkspace(.google.protobuf.Empty) returns (SimplePayWorkspaceDto); // create new workspace on the account
+  rpc WorkspaceCreate(.google.protobuf.Empty) returns (SimplePayWorkspaceDto); // create new workspace on the account
+  // get workspaces
   
   rpc AccountGetAllBalances(SimplePayWorkspaceDto) returns (SimplePayBalanceListResponse); // get all balances
   rpc AccountGetDepositAddress(SimplePayAssetAndNetworkDto) returns (SimplePayAddress); // get deposit address for asset and network

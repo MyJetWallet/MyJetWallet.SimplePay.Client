@@ -1,4 +1,6 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Core.Interceptors;
+using Grpc.Net.Client;
 
 namespace MyJetWallet.SimplePay.Client;
 
@@ -6,7 +8,14 @@ public static class SimplePayFactory
 {
     public static async Task CreateClient(string serviceGrpcUrl)
     {
-        using var channel = GrpcChannel.ForAddress(serviceGrpcUrl);
+        var apiToken = "api::123123123";
+        
+        var channel = GrpcChannel.ForAddress(serviceGrpcUrl).Intercept(metadata =>
+        {
+            metadata.Add("Authorization", $"Bearer {apiToken}");
+            return metadata;
+        });
+        
         var client = new SimplePayClientGrpc.SimplePayClientGrpcClient(channel);
 
         var resp = await client.HelloAsync(new HelloMessage() {Message = "Hi, how are you"});
