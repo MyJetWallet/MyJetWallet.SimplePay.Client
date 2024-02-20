@@ -64,7 +64,7 @@ message SimplePayBalance
   string Balance = 2;
 }
 
-enum TransferStatus 
+enum TransferStatus
 {
   Draft = 0;
   Pending = 1;
@@ -82,7 +82,7 @@ message SimplePayTransfer
   TransferStatus Status = 5;        // status of the transfer
 
   string AssetSymbol = 10;           // payment asset (should be same with contact billing asset)
-  
+
   string PaymentAmount = 11;         // crypto total amount to pay
   string FeeAmount = 12;             // crypto fee amount
   string TransactionAmount = 13;     // crypto amount to send in transaction (after pay fee)
@@ -99,7 +99,7 @@ message SimplePayStatement
   string Description = 3;           // description of the statement
   string CreatedTimestamp = 4;      // timestamp of the statement creation
   TransferStatus Status = 5;        // status of the statement and transfers
-  
+
   repeated SimplePayTransfer Transfers = 10;
 
   string Workspace = 100;           // identify workspace id for request  
@@ -145,9 +145,9 @@ message SimplePayTransferRequest
   string StatementName = 2;         // client-side unique id of transfer. Will be use as settlement name
   string ContactId = 3;             // receiver contact Id
   string Comment = 4;               // comment for payment
-  
+
   string AssetSymbol = 10;           // payment asset (should be same with contact billing asset)
-  
+
   // specify one of the following fields to define Amount of the payment
   optional string PaymentAmount = 11;         // crypto total amount to pay
   optional string TransactionAmount = 13;     // crypto amount to send in transaction (after pay fee)
@@ -171,7 +171,7 @@ message SimplePayWorkspaceCreateRequest
 
 enum ResultCodes {
   Unauthorised = 0;
-  
+  InternalError = 1;
   OK = 10;
   InvalidAddress = 11;
   InvalidTag = 12;
@@ -200,7 +200,7 @@ message SimplePayContactListResponse
 {
   ResultCodes Result = 1001;
   optional string Message = 1002;
-  
+
   repeated SimplePayContact Contacts = 1;
 }
 
@@ -209,7 +209,7 @@ message SimplePayAssetListResponse
   ResultCodes Result = 1001;
   optional string Message = 1002;
 
-  repeated SimplePayAsset Contacts = 1;
+  repeated SimplePayAsset Assets = 1;
 }
 
 message SimplePayBlockchainListResponse
@@ -217,7 +217,7 @@ message SimplePayBlockchainListResponse
   ResultCodes Result = 1001;
   optional string Message = 1002;
 
-  repeated SimplePayBlockchain Contacts = 1;
+  repeated SimplePayBlockchain Blockchains = 1;
 }
 
 message SimplePayBalanceListResponse
@@ -225,7 +225,7 @@ message SimplePayBalanceListResponse
   ResultCodes Result = 1001;
   optional string Message = 1002;
 
-  repeated SimplePayBalance Contacts = 1;
+  repeated SimplePayBalance Balances = 1;
 }
 
 message SimplePayAddressValidationResponse
@@ -238,7 +238,7 @@ message SimplePayTransferPreviewResponse
 {
   ResultCodes Result = 1001;
   optional string Message = 1002;
-  
+
   string ContactId = 3;             // receiver contact Id
 
   string AssetSymbol = 10;           // payment asset (should be same with contact billing asset)
@@ -270,33 +270,33 @@ service SimplePayClientGrpc {
 
   rpc DictionaryGetAllAssets(.google.protobuf.Empty) returns (SimplePayAssetListResponse); // get all assets
   rpc DictionaryGetAllBlockchains(.google.protobuf.Empty) returns (SimplePayBlockchainListResponse); // get all blockchains
-  
+
   rpc WorkspaceCreate(.google.protobuf.Empty) returns (SimplePayWorkspaceDto); // create new workspace on the account
   // get workspaces
-  
+
   rpc AccountGetAllBalances(SimplePayWorkspaceDto) returns (SimplePayBalanceListResponse); // get all balances
   rpc AccountGetDepositAddress(SimplePayAssetAndNetworkDto) returns (SimplePayAddress); // get deposit address for asset and network
-  
+
   rpc ContactCreate(SimplePayContact) returns (SimplePayContactResponse); // create contact and return it with Id
   rpc ContactUpdate(SimplePayContact) returns (SimplePayContactResponse); // update existing contact and return it
   rpc ContactDelete(SimplePayIdDto) returns (.google.protobuf.Empty);     // delete contact by Id
   rpc ContactGetById(SimplePayIdDto) returns (SimplePayContactResponse);  // get contact by Id
   rpc ContactGetAllContactStream(SimplePayWorkspaceDto) returns (stream SimplePayContact); // get all contacts as stream
   rpc ValidateAddress(SimplePayAddress) returns (SimplePayAddressValidationResponse); // validate blockchain address
-  
+
   rpc SingleTransferPreview(SimplePayTransferRequest) returns (SimplePayTransferPreviewResponse); // preview transfer amounts and fee
   rpc SingleTransferExecute(SimplePayTransferRequest) returns (SimplePayStatementResponse); // make and execute statement with single transfer
   rpc StatementGetById(SimplePayIdDto) returns (SimplePayStatementResponse); // make and execute statement with single transfer
   rpc StatementGetByName(SimplePayNameDto) returns (SimplePayStatementResponse); // make and execute statement with single transfer
-  
-  
+
+
   // create workspace
   // get payment by id
   // get payment history stream (filter)
   // callback payment
   // callback deposit
   // deposit history stream (by id or by filter)
-  
-  
-  
+
+
+
 }
