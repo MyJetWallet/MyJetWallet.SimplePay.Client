@@ -1,3 +1,0 @@
-obj/Debug/net8.0/Simplepay.cs \
-obj/Debug/net8.0/SimplepayGrpc.cs: /Users/alexey/.nuget/packages/grpc.tools/2.61.0/build/native/include/google/protobuf/empty.proto\
- ../../simplepay.proto
