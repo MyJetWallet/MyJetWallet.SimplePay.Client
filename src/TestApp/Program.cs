@@ -6,8 +6,8 @@ using MyJetWallet.SimplePay.Client;
 
 Console.WriteLine("Hello, World!");
 
-var serviceGrpcUrl = "http://localhost:80";
-var apiToken = "api::123123123";
+var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+var apiToken = "test_token";
         
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
 
