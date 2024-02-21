@@ -13,7 +13,7 @@ public static class SimplePayFactory
             metadata.Add("Authorization", $"Bearer {apiToken}");
             return metadata;
         });
-        
+
         var client = new SimplePayClientGrpc.SimplePayClientGrpcClient(channel);
 
 
