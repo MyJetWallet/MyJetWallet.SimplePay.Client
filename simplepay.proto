@@ -45,7 +45,9 @@ message SimplePayAsset
   string Symbol = 1;
   string Name = 2;
   string IconUrl = 3;
-  repeated string Networks = 4;
+  repeated string DepositNetworks = 4;
+  repeated string TransferNetworks = 5;
+
 }
 
 // Blockchain address description
@@ -55,6 +57,16 @@ message SimplePayAddress
   string NetworkId = 2;
   string Address = 3;
   optional string Tag = 4;
+
+  string Workspace = 100;           // identify workspace id for request
+}
+
+message SimplePayAddressResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+
+  SimplePayAddress Address = 1;
 }
 
 // workspace balance
@@ -71,6 +83,7 @@ enum TransferStatus
   InProgress = 2;
   Completed = 3;
   Cancelled = 4;
+  PartiallyCompleted = 5;
 }
 
 message SimplePayTransfer
@@ -97,7 +110,7 @@ message SimplePayStatement
   string Id = 1;                    // server-side unique id of the statement
   string Name = 2;                  // client-side unique id/name of the statement
   string Description = 3;           // description of the statement
-  string CreatedTimestamp = 4;      // timestamp of the statement creation
+  string LastUpdate = 4;            // timestamp of the statement last update
   TransferStatus Status = 5;        // status of the statement and transfers
 
   repeated SimplePayTransfer Transfers = 10;
@@ -170,7 +183,7 @@ message SimplePayWorkspaceCreateRequest
  */
 
 enum ResultCodes {
-  Unauthorised = 0;
+  Unauthorized = 0;
   InternalError = 1;
   OK = 10;
   InvalidAddress = 11;
@@ -180,6 +193,7 @@ enum ResultCodes {
   AssetNotFound = 15;
   BlockchainNotFound = 16;
   StatementAlreadyExists = 17;
+  StatementNotFound = 18;
 }
 
 message SimplePayResponse
@@ -275,7 +289,7 @@ service SimplePayClientGrpc {
   // get workspaces
 
   rpc AccountGetAllBalances(SimplePayWorkspaceDto) returns (SimplePayBalanceListResponse); // get all balances
-  rpc AccountGetDepositAddress(SimplePayAssetAndNetworkDto) returns (SimplePayAddress); // get deposit address for asset and network
+  rpc AccountGetDepositAddress(SimplePayAssetAndNetworkDto) returns (SimplePayAddressResponse); // get deposit address for asset and network
 
   rpc ContactCreate(SimplePayContact) returns (SimplePayContactResponse); // create contact and return it with Id
   rpc ContactUpdate(SimplePayContact) returns (SimplePayContactResponse); // update existing contact and return it
