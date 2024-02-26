@@ -5,17 +5,17 @@ using Grpc.Core;
 using MyJetWallet.SimplePay;
 using MyJetWallet.SimplePay.Client;
 
-//var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
-var serviceGrpcUrl = "http://localhost:80";
+var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+//var serviceGrpcUrl = "http://localhost:80";
 var apiToken = "test_token";
 var workspace = "pay-001";
 var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
     
-await SayHello(client);
+//await SayHello(client);
 //await GetBalance(client);
-//await ContactsDemo(client);
-await PaymentDemo(client);
+await ContactsDemo(client);
+//await PaymentDemo(client);
 
 
 Console.ReadLine();
@@ -23,8 +23,8 @@ Console.WriteLine("Good bye!");
 
 async Task SayHello(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
-    var resp = await simplePayClientGrpcClient.HelloAsync(new HelloMessage() {Message = "Hi, how are you"});
-    Console.WriteLine($"Resp: {resp.Message}");
+    var resp = await simplePayClientGrpcClient.HelloAsync(new HelloMessage() {Message = "Hi, how are you #1"});
+   Console.WriteLine($"Resp: {resp.Message}");
 
 
     var whoResp = await simplePayClientGrpcClient.WhoIAmAsync(new Empty());
@@ -45,6 +45,13 @@ async Task GetBalance(SimplePayClientGrpc.SimplePayClientGrpcClient client1)
 
 async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
+    var assets = await simplePayClientGrpcClient.DictionaryGetAllAssetsAsync(new Empty());
+    var networks = await simplePayClientGrpcClient.DictionaryGetAllBlockchainsAsync(new Empty());
+    
+    Console.WriteLine($"Assets: {assets}");
+    Console.WriteLine($"Assets: {networks}");
+    
+    
     var validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
     {
         Workspace = workspace,
@@ -60,7 +67,7 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     {
         Workspace = workspace,
         AssetSymbol = "ETH",
-        Address = "0x8D0aa0483728cF3404CB8fc867540435BEB4AeDf",
+        Address = "0xe079dcaeb3549b719ff2C5c87ec119dc7a2789b3",
         NetworkId = "fireblocks-eth-goerli"
     });
     Console.WriteLine($"Validate address: {validateResp}");
@@ -85,7 +92,7 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
         Id = id,
         Workspace = workspace,
         AssetSymbol = createResp.Contact.AssetSymbol,
-        BlockchainAddress = "0xB4C61996a79599451404EE2c663acE53f34D0e0a",
+        BlockchainAddress = "0xe079dcaeb3549b719ff2C5c87ec119dc7a2789b3",
         NetworkId = createResp.Contact.NetworkId,
         GroupId = createResp.Contact.GroupId,
         Name = "My test contact updated",
@@ -101,6 +108,15 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
         Console.WriteLine($"Contact: {contact}");
     }
 
+    var myContact = await simplePayClientGrpcClient.ContactGetByIdAsync(new SimplePayIdDto()
+    {
+        Id = id, Workspace = workspace
+    });
+    
+    Console.WriteLine();
+    Console.WriteLine($"My Contact: {myContact}");
+    Console.WriteLine();
+    
     Console.WriteLine("Press enter to continue, to Delete a contact ...");
     Console.ReadLine();
 

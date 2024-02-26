@@ -130,6 +130,10 @@ message SimplePayWorkspaceDto // workspace id request
   string Workspace = 100;           // identify workspace id for request
 }
 
+message WorkspaceCreateRequest
+{
+  string ExternalUniqueId = 1;      // external unique id of the workspace. Will be use to generate simple pay id
+}
 
 message SimplePayIdDto
 {
@@ -246,6 +250,7 @@ message SimplePayAddressValidationResponse
 {
   ResultCodes Result = 1001;
   optional string Message = 1002;
+  bool IsSimple = 3;               // is address simple address and transfer will be internal
 }
 
 message SimplePayTransferPreviewResponse
@@ -285,7 +290,7 @@ service SimplePayClientGrpc {
   rpc DictionaryGetAllAssets(.google.protobuf.Empty) returns (SimplePayAssetListResponse); // get all assets
   rpc DictionaryGetAllBlockchains(.google.protobuf.Empty) returns (SimplePayBlockchainListResponse); // get all blockchains
 
-  rpc WorkspaceCreate(.google.protobuf.Empty) returns (SimplePayWorkspaceDto); // create new workspace on the account
+  rpc WorkspaceCreate(WorkspaceCreateRequest) returns (SimplePayWorkspaceDto); // create new workspace on the account
   // get workspaces
 
   rpc AccountGetAllBalances(SimplePayWorkspaceDto) returns (SimplePayBalanceListResponse); // get all balances
