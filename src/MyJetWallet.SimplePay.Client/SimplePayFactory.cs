@@ -1,4 +1,5 @@
-﻿using Grpc.Core;
+﻿using System.Globalization;
+using Grpc.Core;
 using Grpc.Core.Interceptors;
 using Grpc.Net.Client;
 
@@ -18,5 +19,18 @@ public static class SimplePayFactory
 
 
         return client;
+    }
+
+    public static decimal AsDecimal(this string value)
+    {
+        if (decimal.TryParse(value, out var result))
+            return result;
+
+        throw new Exception($"Cannot convert '{value}' to decimal");
+    }
+    
+    public static string AsString(this decimal value)
+    {
+        return value.ToString(CultureInfo.InvariantCulture);
     }
 }

@@ -5,14 +5,17 @@ using Grpc.Core;
 using MyJetWallet.SimplePay;
 using MyJetWallet.SimplePay.Client;
 
-var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+//var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+var serviceGrpcUrl = "http://localhost:80";
 var apiToken = "test_token";
 var workspace = "pay-001";
+var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
-//await SayHello(client);
+    
+await SayHello(client);
 //await GetBalance(client);
 //await ContactsDemo(client);
-//await PaymentDemo(client);
+await PaymentDemo(client);
 
 
 Console.ReadLine();
@@ -35,47 +38,72 @@ async Task SayHello(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClien
 async Task GetBalance(SimplePayClientGrpc.SimplePayClientGrpcClient client1)
 {
     var resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() {Workspace = workspace});
-    Console.WriteLine($"Resp: {resp}");
+    Console.WriteLine($"Balance pay-001: {resp}");
+    resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() {Workspace = workspace2});
+    Console.WriteLine($"Balance pay-002: {resp}");
 }
 
 async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
-    var id = Guid.NewGuid().ToString();
-
+    var validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
+    {
+        Workspace = workspace,
+        AssetSymbol = "ETH",
+        Address = "0x8D0aa0483728cF3404CB8fc867540435BEB4AeDaaa",
+        NetworkId = "fireblocks-eth-goerli"
+    });
+    
+    Console.WriteLine($"Validate WRONG address: {validateResp}");
+    
+    
+    validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
+    {
+        Workspace = workspace,
+        AssetSymbol = "ETH",
+        Address = "0x8D0aa0483728cF3404CB8fc867540435BEB4AeDf",
+        NetworkId = "fireblocks-eth-goerli"
+    });
+    Console.WriteLine($"Validate address: {validateResp}");
+    
     var createResp = await simplePayClientGrpcClient.ContactCreateAsync(new()
     {
-        Id = id,
         Workspace = workspace,
         AssetSymbol = "ETH",
         BlockchainAddress = "0x8D0aa0483728cF3404CB8fc867540435BEB4AeDf",
         NetworkId = "fireblocks-eth-goerli",
-        GroupId = "1",
-        Name = "My test contact",
+        GroupId = 0,
+        Name = $"My test contact ({DateTime.Now.Date:yyyy-MM-dd})",
         Description = "test"
     });
     
     Console.WriteLine($"CreateResp: {createResp}");
+    
+    var id = createResp.Contact.Id;
     
     var updateResp = await simplePayClientGrpcClient.ContactUpdateAsync(new()
     {
         Id = id,
         Workspace = workspace,
         AssetSymbol = createResp.Contact.AssetSymbol,
-        BlockchainAddress = createResp.Contact.BlockchainAddress,
+        BlockchainAddress = "0xB4C61996a79599451404EE2c663acE53f34D0e0a",
         NetworkId = createResp.Contact.NetworkId,
         GroupId = createResp.Contact.GroupId,
         Name = "My test contact updated",
-        Description = "test updated"
+        Description = $"test updated {DateTime.Now.Date:yyyy-MM-dd}"
     });
     
     Console.WriteLine($"UpdateResp: {updateResp}");
     
+    Console.WriteLine("Contact list:");
     var allResp = simplePayClientGrpcClient.ContactGetAllContactStream(new SimplePayWorkspaceDto() {Workspace = workspace});
     await foreach (var contact in allResp.ResponseStream.ReadAllAsync())
     {
         Console.WriteLine($"Contact: {contact}");
     }
-    
+
+    Console.WriteLine("Press enter to continue, to Delete a contact ...");
+    Console.ReadLine();
+
     var deleteResp = await simplePayClientGrpcClient.ContactDeleteAsync(new () {Id = id, Workspace = workspace});
     
     Console.WriteLine($"DeleteResp: {deleteResp}");
@@ -83,27 +111,15 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
 
 async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
-    var contactId = Guid.NewGuid().ToString();
-    var createResp = await simplePayClientGrpcClient.ContactCreateAsync(new()
-    {
-        Id = contactId,
-        Workspace = workspace,
-        AssetSymbol = "ETH",
-        BlockchainAddress = "0x8D0aa0483728cF3404CB8fc867540435BEB4AeDf",
-        NetworkId = "fireblocks-eth-goerli",
-        GroupId = "1",
-        Name = "My test contact",
-        Description = "test",
-    });
-    
-    Console.WriteLine($"CreateResp: {createResp}");
+    var contactId = "428a82ade6464619bdb39ebbacce062a";
     
     var transferPreviewResp = await simplePayClientGrpcClient.SingleTransferPreviewAsync(new()
     {
         Workspace = workspace,
-        AssetSymbol = "ETH",
-        ContactId = createResp.Contact.Id,
-        PaymentAmount = "0.0001",
+        AssetSymbol = "USDT",
+        ContactId = contactId,
+        PaymentAmount = 10m.AsString(),
+        
     });
     
     Console.WriteLine($"TransferPreviewResp: {transferPreviewResp}");
@@ -111,21 +127,31 @@ async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCl
     var transferResp = await simplePayClientGrpcClient.SingleTransferExecuteAsync(new()
     {
         Workspace = workspace,
-        AssetSymbol = "ETH",
-        ContactId = createResp.Contact.Id,
-        PaymentAmount = "0.0001",
-        StatementName = $"Demo {Guid.NewGuid().ToString()}"
+        AssetSymbol = "USDT",
+        ContactId = contactId,
+        PaymentAmount = 10m.AsString(),
+        StatementName = $"Demo {Guid.NewGuid().ToString()}",
+        Comment = $"Test transfer at {DateTime.UtcNow:O}"
     });
     
     Console.WriteLine($"TransferResp: {transferResp}");
     
-    var statesmentResp = await simplePayClientGrpcClient.StatementGetByIdAsync(new()
+    var statementResp = await simplePayClientGrpcClient.StatementGetByIdAsync(new()
     {
         Workspace = workspace,
         Id = transferResp.Statement?.Id,
     });
     
-    Console.WriteLine($"StatesmentResp: {statesmentResp}");
+    Console.WriteLine($"Statement after execute: {statementResp}");
     
-    var deleteResp = await simplePayClientGrpcClient.ContactDeleteAsync(new () {Id = contactId, Workspace = workspace});
+    Console.WriteLine("Press ENTER to continue and read new Statement version ...");
+    Console.ReadLine();
+    
+    statementResp = await simplePayClientGrpcClient.StatementGetByIdAsync(new()
+    {
+        Workspace = workspace,
+        Id = transferResp.Statement?.Id,
+    });
+    
+    Console.WriteLine($"Statement New Version: {statementResp}");
 }

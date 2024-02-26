@@ -21,7 +21,7 @@ message SimplePayContact
 {
   string Id = 1;
   string Name = 2;
-  optional string GroupId = 3;
+  optional int64 GroupId = 3;
   optional string Description = 4;
   string AssetSymbol = 5;
   string NetworkId = 6;
