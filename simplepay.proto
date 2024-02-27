@@ -127,6 +127,9 @@ message SimplePayStatement
 
 message SimplePayWorkspaceDto // workspace id request
 {
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+  
   string Workspace = 100;           // identify workspace id for request
 }
 
@@ -298,9 +301,9 @@ service SimplePayClientGrpc {
 
   rpc ContactCreate(SimplePayContact) returns (SimplePayContactResponse); // create contact and return it with Id
   rpc ContactUpdate(SimplePayContact) returns (SimplePayContactResponse); // update existing contact and return it
-  rpc ContactDelete(SimplePayIdDto) returns (.google.protobuf.Empty);     // delete contact by Id
+  rpc ContactDelete(SimplePayIdDto) returns (SimplePayResponse);     // delete contact by Id
   rpc ContactGetById(SimplePayIdDto) returns (SimplePayContactResponse);  // get contact by Id
-  rpc ContactGetAllContactStream(SimplePayWorkspaceDto) returns (stream SimplePayContact); // get all contacts as stream
+  rpc ContactGetAllContactStream(SimplePayWorkspaceDto) returns (stream SimplePayContact); // get all contacts as stream. Exception in unauthorised case
   rpc ValidateAddress(SimplePayAddress) returns (SimplePayAddressValidationResponse); // validate blockchain address
 
   rpc SingleTransferPreview(SimplePayTransferRequest) returns (SimplePayTransferPreviewResponse); // preview transfer amounts and fee

@@ -14,8 +14,15 @@ var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
     
 //await SayHello(client);
 //await GetBalance(client);
-await ContactsDemo(client);
+// await ContactsDemo(client);
 //await PaymentDemo(client);
+TestResponses();
+
+void TestResponses()
+{
+    var resp1 = new SimplePayContactResponse() {Result = ResultCodes.InternalError, Message = "Test"};
+    
+}
 
 
 Console.ReadLine();
@@ -23,6 +30,7 @@ Console.WriteLine("Good bye!");
 
 async Task SayHello(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
+    
     var resp = await simplePayClientGrpcClient.HelloAsync(new HelloMessage() {Message = "Hi, how are you #1"});
    Console.WriteLine($"Resp: {resp.Message}");
 
@@ -49,7 +57,8 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     var networks = await simplePayClientGrpcClient.DictionaryGetAllBlockchainsAsync(new Empty());
     
     Console.WriteLine($"Assets: {assets}");
-    Console.WriteLine($"Assets: {networks}");
+    Console.WriteLine();
+    Console.WriteLine($"Networks: {networks}");
     
     
     var validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
@@ -102,8 +111,9 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     Console.WriteLine($"UpdateResp: {updateResp}");
     
     Console.WriteLine("Contact list:");
-    var allResp = simplePayClientGrpcClient.ContactGetAllContactStream(new SimplePayWorkspaceDto() {Workspace = workspace});
-    await foreach (var contact in allResp.ResponseStream.ReadAllAsync())
+
+    var allContacts = await simplePayClientGrpcClient.ContactGetAllContactListAsync(workspace);
+    foreach (var contact in allContacts)
     {
         Console.WriteLine($"Contact: {contact}");
     }
