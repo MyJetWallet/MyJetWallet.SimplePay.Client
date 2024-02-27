@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Runtime.InteropServices;
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using Grpc.Net.Client;
@@ -9,14 +10,32 @@ public static class SimplePayFactory
 {
     public static SimplePayClientGrpc.SimplePayClientGrpcClient CreateClient(string serviceGrpcUrl, string apiToken)
     {
-        var channel = GrpcChannel.ForAddress(serviceGrpcUrl).Intercept(metadata =>
+
+        bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
+        CallInvoker channel;
+
+        if (isWindows)
         {
-            metadata.Add("Authorization", $"Bearer {apiToken}");
-            return metadata;
-        });
+            channel = GrpcChannel.ForAddress(serviceGrpcUrl, new GrpcChannelOptions
+            {
+                HttpHandler = new WinHttpHandler()
+            }).Intercept(metadata =>
+            {
+                metadata.Add("Authorization", $"Bearer {apiToken}");
+                return metadata;
+            });
+        }
+        else
+        {
+            channel = GrpcChannel.ForAddress(serviceGrpcUrl).Intercept(metadata =>
+            {
+                metadata.Add("Authorization", $"Bearer {apiToken}");
+                return metadata;
+            });
+        }
 
         var client = new SimplePayClientGrpc.SimplePayClientGrpcClient(channel);
-
 
         return client;
     }

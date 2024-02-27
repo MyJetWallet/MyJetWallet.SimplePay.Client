@@ -12,7 +12,7 @@ var workspace = "pay-001";
 var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
     
-//await SayHello(client);
+await SayHello(client);
 //await GetBalance(client);
 // await ContactsDemo(client);
 //await PaymentDemo(client);

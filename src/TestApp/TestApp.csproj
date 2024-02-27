@@ -11,4 +11,8 @@
       <ProjectReference Include="..\MyJetWallet.SimplePay.Client\MyJetWallet.SimplePay.Client.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="System.Net.Http.WinHttpHandler" Version="8.0.0" />
+    </ItemGroup>
+
 </Project>
