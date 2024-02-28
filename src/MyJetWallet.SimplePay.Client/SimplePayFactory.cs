@@ -17,6 +17,7 @@ public static class SimplePayFactory
 
         if (isWindows)
         {
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
             channel = GrpcChannel.ForAddress(serviceGrpcUrl, new GrpcChannelOptions
             {
                 HttpHandler = new WinHttpHandler()
