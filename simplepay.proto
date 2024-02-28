@@ -101,6 +101,7 @@ message SimplePayTransfer
   string TransactionAmount = 13;     // crypto amount to send in transaction (after pay fee)
   string SettleAsset = 14;           // asset that will be delivered to the recipient
   string SettleAmount = 15;          // amount that will be delivered to the recipient
+  string Timestamp = 16;             // timestamp of the transfer
 
   string Workspace = 100;           // identify workspace id for request
 }
@@ -129,7 +130,7 @@ message SimplePayWorkspaceDto // workspace id request
 {
   ResultCodes Result = 1001;
   optional string Message = 1002;
-  
+
   string Workspace = 100;           // identify workspace id for request
 }
 
@@ -279,6 +280,38 @@ message SimplePayStatementResponse
   SimplePayStatement Statement = 1;
 }
 
+message DepositHistoryRequest
+{
+  string AssetSymbol = 1;
+  int32 Take = 2;
+  string LastTs = 3;
+  string ContactId = 4;
+
+  string Workspace = 100;           // identify workspace id for request
+}
+
+message DepositHistoryResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+
+  repeated SimplePayDeposit Deposits = 1;
+}
+
+message SimplePayDeposit
+{
+  string Id = 1;
+  string AssetSymbol = 2;
+  string NetworkId = 3;
+  optional string Address = 4;
+  optional string Tag = 5;
+  string Amount = 6;
+  string Timestamp = 7;
+  optional string Txid = 8;
+  TransferStatus Status = 9;
+  string Workspace = 100;           // identify workspace id for request
+}
+
 /*
  * ====================================================
  * Simple Pay API - Service
@@ -311,6 +344,7 @@ service SimplePayClientGrpc {
   rpc StatementGetById(SimplePayIdDto) returns (SimplePayStatementResponse); // make and execute statement with single transfer
   rpc StatementGetByName(SimplePayNameDto) returns (SimplePayStatementResponse); // make and execute statement with single transfer
 
+  rpc GetDepositHistory(DepositHistoryRequest) returns (DepositHistoryResponse); // get deposit history by filter
 
   // create workspace
   // get payment by id

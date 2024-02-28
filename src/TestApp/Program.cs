@@ -12,11 +12,13 @@ var workspace = "pay-001";
 var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
     
-await SayHello(client);
+//await SayHello(client);
 //await GetBalance(client);
-// await ContactsDemo(client);
+//await ContactsDemo(client);
 //await PaymentDemo(client);
-TestResponses();
+//TestResponses();
+await GetDepositHistory(client);
+
 
 void TestResponses()
 {
@@ -180,4 +182,16 @@ async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCl
     });
     
     Console.WriteLine($"Statement New Version: {statementResp}");
+}
+
+async Task GetDepositHistory(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+{
+    var resp = await simplePayClientGrpcClient.GetDepositHistoryAsync(new ()
+    {
+        Workspace = workspace2,
+        AssetSymbol = "USDT",
+        Take = 10
+    });
+    
+    Console.WriteLine($"Deposit History: {resp}");
 }
