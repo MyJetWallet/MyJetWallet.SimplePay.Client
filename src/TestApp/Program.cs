@@ -5,19 +5,19 @@ using Grpc.Core;
 using MyJetWallet.SimplePay;
 using MyJetWallet.SimplePay.Client;
 
-var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
-//var serviceGrpcUrl = "http://localhost:80";
+//var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+var serviceGrpcUrl = "http://localhost:80";
 var apiToken = "test_token";
 var workspace = "pay-001";
 var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
     
 //await SayHello(client);
-//await GetBalance(client);
+await GetBalance(client);
 //await ContactsDemo(client);
 //await PaymentDemo(client);
 //TestResponses();
-await GetDepositHistory(client);
+//await GetDepositHistory(client);
 
 
 void TestResponses()
@@ -189,6 +189,7 @@ async Task GetDepositHistory(SimplePayClientGrpc.SimplePayClientGrpcClient simpl
     var resp = await simplePayClientGrpcClient.GetDepositHistoryAsync(new ()
     {
         Workspace = workspace2,
+        LastSeenId = "1708941261970",
         AssetSymbol = "USDT",
         Take = 10
     });

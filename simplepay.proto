@@ -74,6 +74,7 @@ message SimplePayBalance
 {
   string AssetSymbol = 1;
   string Balance = 2;
+  string BalanceInUsd = 3;
 }
 
 enum TransferStatus
@@ -284,8 +285,9 @@ message DepositHistoryRequest
 {
   string AssetSymbol = 1;
   int32 Take = 2;
-  string LastTs = 3;
-  string ContactId = 4;
+  string LastSeenId = 3;
+  string FromTimestamp = 4;
+  string ToTimestamp = 5;
 
   string Workspace = 100;           // identify workspace id for request
 }
@@ -303,13 +305,14 @@ message SimplePayDeposit
   string Id = 1;
   string AssetSymbol = 2;
   string NetworkId = 3;
-  optional string Address = 4;
-  optional string Tag = 5;
   string Amount = 6;
   string Timestamp = 7;
   optional string Txid = 8;
   TransferStatus Status = 9;
-  string Workspace = 100;           // identify workspace id for request
+  optional string ExplorerUrl = 10;
+  bool IsInternal = 11;
+
+  string Workspace = 100;
 }
 
 /*
