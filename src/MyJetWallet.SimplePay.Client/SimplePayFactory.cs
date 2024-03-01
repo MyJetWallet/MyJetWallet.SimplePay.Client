@@ -43,7 +43,7 @@ public static class SimplePayFactory
 
     public static decimal AsDecimal(this string value)
     {
-        if (decimal.TryParse(value, out var result))
+        if (decimal.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
             return result;
 
         throw new Exception($"Cannot convert '{value}' to decimal");
