@@ -48,4 +48,12 @@ public static class SimplePayFactory
     {
         return value.ToString(CultureInfo.InvariantCulture);
     }
+
+    public static DateTime AsDateTime(this string value, DateTimeStyles styles = DateTimeStyles.None)
+    {
+        if (DateTime.TryParse(value, CultureInfo.InvariantCulture, styles, out var result))
+            return result;
+
+        throw new Exception($"Cannot convert '{value}' to DateTime");
+    }
 }
