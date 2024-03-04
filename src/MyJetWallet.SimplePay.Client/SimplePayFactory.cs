@@ -38,7 +38,7 @@ public static class SimplePayFactory
 
     public static decimal AsDecimal(this string value)
     {
-        if (decimal.TryParse(value.Replace('.', ','), out var result))
+        if (decimal.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
             return result;
 
         throw new Exception($"Cannot convert '{value}' to decimal");
@@ -47,5 +47,13 @@ public static class SimplePayFactory
     public static string AsString(this decimal value)
     {
         return value.ToString(CultureInfo.InvariantCulture);
+    }
+
+    public static DateTime AsDateTime(this string value, DateTimeStyles styles = DateTimeStyles.None)
+    {
+        if (DateTime.TryParse(value, CultureInfo.InvariantCulture, styles, out var result))
+            return result;
+
+        throw new Exception($"Cannot convert '{value}' to DateTime");
     }
 }
