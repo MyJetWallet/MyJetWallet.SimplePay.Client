@@ -5,15 +5,17 @@ using Grpc.Core;
 using MyJetWallet.SimplePay;
 using MyJetWallet.SimplePay.Client;
 
-//var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
-var serviceGrpcUrl = "http://localhost:80";
+var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
+//var serviceGrpcUrl = "http://localhost:80";
 var apiToken = "test_token";
 var workspace = "pay-001";
 var workspace2 = "pay-002";
-var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
+//var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
+//var client = SimplePayFactory.CreateClientForWindows(serviceGrpcUrl, apiToken, true); //for local Grpc service
+var client = SimplePayFactory.CreateClientForWindows(serviceGrpcUrl, apiToken, false); //for remote Grpc service
 
-//await SayHello(client);
-await GetBalance(client);
+await SayHello(client);
+//await GetBalance(client);
 //await ContactsDemo(client);
 //await PaymentDemo(client, TransactionAmountType.Settlement); //amount that will be received
 //await PaymentDemo(client, TransactionAmountType.Total); //amount that will be send (including fee)
@@ -25,7 +27,6 @@ void TestResponses()
     var resp1 = new SimplePayContactResponse() { Result = ResultCodes.InternalError, Message = "Test" };
 
 }
-
 
 Console.ReadLine();
 Console.WriteLine("Good bye!");

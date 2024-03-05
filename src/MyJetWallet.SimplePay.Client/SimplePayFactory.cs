@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Runtime.InteropServices;
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using Grpc.Net.Client;
@@ -16,20 +15,26 @@ public static class SimplePayFactory
             return metadata;
         });
 
-        bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
         var client = new SimplePayClientGrpc.SimplePayClientGrpcClient(channel);
 
-        CallInvoker channel;
         return client;
     }
 
-        if (isWindows)
-    public static SimplePayClientGrpc.SimplePayClientGrpcClient CreateClientForWindows(string serviceGrpcUrl, string apiToken)
+    public static SimplePayClientGrpc.SimplePayClientGrpcClient CreateClientForWindows(string serviceGrpcUrl, string apiToken, bool isLocalDebug)
     {
         AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-        var channel = GrpcChannel.ForAddress(serviceGrpcUrl, new GrpcChannelOptions
+        CallInvoker channel;
+
+        if (isLocalDebug)
         {
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+            channel = GrpcChannel.ForAddress(serviceGrpcUrl).Intercept(metadata =>
+            {
+                metadata.Add("Authorization", $"Bearer {apiToken}");
+                return metadata;
+            });
+        }
+        else
+        {
             channel = GrpcChannel.ForAddress(serviceGrpcUrl, new GrpcChannelOptions
             {
                 HttpHandler = new WinHttpHandler()
@@ -39,38 +44,6 @@ public static class SimplePayFactory
                 return metadata;
             });
         }
-        else
-            HttpHandler = new WinHttpHandler()
-        }).Intercept(metadata =>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {
-            channel = GrpcChannel.ForAddress(serviceGrpcUrl).Intercept(metadata =>
-            {
-                metadata.Add("Authorization", $"Bearer {apiToken}");
-                return metadata;
-            });
-        }
-            metadata.Add("Authorization", $"Bearer {apiToken}");
-            return metadata;
-        });
 
         var client = new SimplePayClientGrpc.SimplePayClientGrpcClient(channel);
 
@@ -79,13 +52,11 @@ public static class SimplePayFactory
 
     public static decimal AsDecimal(this string value)
     {
-        if (decimal.TryParse(value, out var result))
         if (decimal.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
             return result;
 
         throw new Exception($"Cannot convert '{value}' to decimal");
     }
-    
 
     public static string AsString(this decimal value)
     {
