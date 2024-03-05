@@ -11,19 +11,19 @@ var apiToken = "test_token";
 var workspace = "pay-001";
 var workspace2 = "pay-002";
 var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
-    
+
 //await SayHello(client);
 await GetBalance(client);
 //await ContactsDemo(client);
-//await PaymentDemo(client);
+//await PaymentDemo(client, TransactionAmountType.Settlement); //amount that will be received
+//await PaymentDemo(client, TransactionAmountType.Total); //amount that will be send (including fee)
 //TestResponses();
 //await GetDepositHistory(client);
 
-
 void TestResponses()
 {
-    var resp1 = new SimplePayContactResponse() {Result = ResultCodes.InternalError, Message = "Test"};
-    
+    var resp1 = new SimplePayContactResponse() { Result = ResultCodes.InternalError, Message = "Test" };
+
 }
 
 
@@ -32,10 +32,8 @@ Console.WriteLine("Good bye!");
 
 async Task SayHello(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
 {
-    
-    var resp = await simplePayClientGrpcClient.HelloAsync(new HelloMessage() {Message = "Hi, how are you #1"});
-   Console.WriteLine($"Resp: {resp.Message}");
-
+    var resp = await simplePayClientGrpcClient.HelloAsync(new HelloMessage() { Message = "Hi, how are you #1" });
+    Console.WriteLine($"Resp: {resp.Message}");
 
     var whoResp = await simplePayClientGrpcClient.WhoIAmAsync(new Empty());
 
@@ -47,9 +45,9 @@ async Task SayHello(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClien
 
 async Task GetBalance(SimplePayClientGrpc.SimplePayClientGrpcClient client1)
 {
-    var resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() {Workspace = workspace});
+    var resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() { Workspace = workspace });
     Console.WriteLine($"Balance pay-001: {resp}");
-    resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() {Workspace = workspace2});
+    resp = await client1.AccountGetAllBalancesAsync(new SimplePayWorkspaceDto() { Workspace = workspace2 });
     Console.WriteLine($"Balance pay-002: {resp}");
 }
 
@@ -62,7 +60,6 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     Console.WriteLine();
     Console.WriteLine($"Networks: {networks}");
     
-    
     var validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
     {
         Workspace = workspace,
@@ -72,7 +69,6 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     });
     
     Console.WriteLine($"Validate WRONG address: {validateResp}");
-    
     
     validateResp = await simplePayClientGrpcClient.ValidateAddressAsync(new SimplePayAddress()
     {
@@ -122,7 +118,8 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
 
     var myContact = await simplePayClientGrpcClient.ContactGetByIdAsync(new SimplePayIdDto()
     {
-        Id = id, Workspace = workspace
+        Id = id,
+        Workspace = workspace
     });
     
     Console.WriteLine();
@@ -132,12 +129,12 @@ async Task ContactsDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayC
     Console.WriteLine("Press enter to continue, to Delete a contact ...");
     Console.ReadLine();
 
-    var deleteResp = await simplePayClientGrpcClient.ContactDeleteAsync(new () {Id = id, Workspace = workspace});
-    
+    var deleteResp = await simplePayClientGrpcClient.ContactDeleteAsync(new() { Id = id, Workspace = workspace });
+
     Console.WriteLine($"DeleteResp: {deleteResp}");
 }
 
-async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient, TransactionAmountType amountType)
 {
     var contactId = "428a82ade6464619bdb39ebbacce062a";
     
@@ -146,8 +143,9 @@ async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCl
         Workspace = workspace,
         AssetSymbol = "USDT",
         ContactId = contactId,
-        PaymentAmount = 10m.AsString(),
-        
+        PaymentAmount = amountType == TransactionAmountType.Settlement ? 10m.AsString() : string.Empty,
+        TransactionAmount = amountType == TransactionAmountType.Total ? 10m.AsString() : string.Empty,
+
     });
     
     Console.WriteLine($"TransferPreviewResp: {transferPreviewResp}");
@@ -157,7 +155,8 @@ async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCl
         Workspace = workspace,
         AssetSymbol = "USDT",
         ContactId = contactId,
-        PaymentAmount = 10m.AsString(),
+        PaymentAmount = amountType == TransactionAmountType.Settlement ? 10m.AsString() : string.Empty,
+        TransactionAmount = amountType == TransactionAmountType.Total ? 10m.AsString() : string.Empty,
         StatementName = $"Demo {Guid.NewGuid().ToString()}",
         Comment = $"Test transfer at {DateTime.UtcNow:O}"
     });
@@ -180,7 +179,7 @@ async Task PaymentDemo(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCl
         Workspace = workspace,
         Id = transferResp.Statement?.Id,
     });
-    
+
     Console.WriteLine($"Statement New Version: {statementResp}");
 }
 
@@ -195,4 +194,9 @@ async Task GetDepositHistory(SimplePayClientGrpc.SimplePayClientGrpcClient simpl
     });
     
     Console.WriteLine($"Deposit History: {resp}");
+}
+public enum TransactionAmountType
+{
+    Settlement,
+    Total
 }
