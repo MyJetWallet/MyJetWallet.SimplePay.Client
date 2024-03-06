@@ -390,10 +390,8 @@ service SimplePayClientGrpc {
   rpc StatementGetByName(SimplePayNameDto) returns (SimplePayStatementResponse); // make and execute statement with single transfer
 
   rpc GetDepositHistory(DepositHistoryRequest) returns (DepositHistoryResponse); // get deposit history by filter
-
-  rpc AddCallbackDeposit(AddCallbackRequest) returns (CallbackResponse); // add deposit to the history
-  rpc AddCallbackPayment(AddCallbackRequest) returns (CallbackResponse); // add payment to the history
-  rpc AddCallbackBalance(AddCallbackRequest) returns (CallbackResponse); // add balance to the history
+  
+  rpc AddCallback(AddCallbackRequest) returns (CallbackResponse);
   rpc ListEnabledCallbacks(GetCallbacksRequest) returns (CallbackListResponse); // get list of enabled callbacks
   rpc DisableCallback(DisableCallbackRequest) returns (CallbackResponse); // disable callback by id
 
