@@ -315,6 +315,48 @@ message SimplePayDeposit
   string Workspace = 100;
 }
 
+message AddCallbackRequest
+{
+  string Url = 1;
+
+  string Workspace = 100;
+}
+
+message CallbackResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+}
+
+message GetCallbacksRequest
+{
+  string Workspace = 100;
+}
+
+message DisableCallbackRequest
+{
+  string Id = 1;
+
+  string Workspace = 100;
+}
+
+message CallbackListResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+
+  repeated CallbackModel Callbacks = 1;
+}
+
+message CallbackModel
+{
+  string Id = 1;
+  string Url = 2;
+  string CreatedTs = 3;
+
+  string Workspace = 100;
+}
+
 /*
  * ====================================================
  * Simple Pay API - Service
@@ -349,13 +391,17 @@ service SimplePayClientGrpc {
 
   rpc GetDepositHistory(DepositHistoryRequest) returns (DepositHistoryResponse); // get deposit history by filter
 
+  rpc AddCallbackDeposit(AddCallbackRequest) returns (CallbackResponse); // add deposit to the history
+  rpc AddCallbackPayment(AddCallbackRequest) returns (CallbackResponse); // add payment to the history
+  rpc AddCallbackBalance(AddCallbackRequest) returns (CallbackResponse); // add balance to the history
+  rpc ListEnabledCallbacks(GetCallbacksRequest) returns (CallbackListResponse); // get list of enabled callbacks
+  rpc DisableCallback(DisableCallbackRequest) returns (CallbackResponse); // disable callback by id
+
   // create workspace
   // get payment by id
   // get payment history stream (filter)
   // callback payment
   // callback deposit
   // deposit history stream (by id or by filter)
-
-
-
+  
 }
