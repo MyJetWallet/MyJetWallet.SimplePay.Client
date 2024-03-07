@@ -10,17 +10,83 @@ var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
 var apiToken = "test_token";
 var workspace = "pay-001";
 var workspace2 = "pay-002";
-//var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
+var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
 //var client = SimplePayFactory.CreateClientForWindows(serviceGrpcUrl, apiToken, true); //for local Grpc service
-var client = SimplePayFactory.CreateClientForWindows(serviceGrpcUrl, apiToken, false); //for remote Grpc service
+//var client = SimplePayFactory.CreateClientForWindows(serviceGrpcUrl, apiToken, false); //for remote Grpc service
 
-await SayHello(client);
+//await SayHello(client);
 //await GetBalance(client);
 //await ContactsDemo(client);
 //await PaymentDemo(client, TransactionAmountType.Settlement); //amount that will be received
 //await PaymentDemo(client, TransactionAmountType.Total); //amount that will be send (including fee)
 //TestResponses();
 //await GetDepositHistory(client);
+//await GetDepositAddress(client);
+
+//--Webhooks--//
+//await AddWebhook(client);
+await GetWebhooks(client);
+//await DisableAllWebhooks(client);
+
+
+async Task DisableAllWebhooks(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+{
+
+    foreach (var w in new List<string>(){workspace, workspace2})
+    {
+        var resp = await simplePayClientGrpcClient.ListEnabledCallbacksAsync(new GetCallbacksRequest()
+        {
+            Workspace = w
+        });
+
+        foreach (var callbackModel in resp.Callbacks)
+        {
+            var r = await simplePayClientGrpcClient.DisableCallbackAsync(new DisableCallbackRequest()
+            {
+                Id = callbackModel.Id,
+                Workspace = callbackModel.Workspace
+            });
+            Console.WriteLine($"DisableCallback: {r}");
+        }
+    }
+}
+
+async Task GetDepositAddress(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+{
+    var resp = await simplePayClientGrpcClient.AccountGetDepositAddressAsync(new SimplePayAssetAndNetworkDto()
+    {
+        AssetSymbol = "ETH",
+        NetworkId = "fireblocks-eth-goerli",
+        Workspace = workspace
+    });
+    Console.WriteLine($"Deposit Address: {resp}");
+}
+
+async Task GetWebhooks(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+{
+    var resp = await simplePayClientGrpcClient.ListEnabledCallbacksAsync(new () { Workspace = workspace });
+    Console.WriteLine($"GetCallback: {resp}");
+    
+    var resp2 = await simplePayClientGrpcClient.ListEnabledCallbacksAsync(new () { Workspace = workspace2 });
+    Console.WriteLine($"GetCallback: {resp2}");
+}
+
+async Task AddWebhook(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
+{
+    var resp = await simplePayClientGrpcClient.AddCallbackAsync(new AddCallbackRequest()
+    {
+        Url = "https://webhook.site/0e90de65-dced-4301-8eec-15fdf08815d9",
+        Workspace = workspace
+    });
+    Console.WriteLine($"AddCallback: {resp}");
+    
+    var resp2 = await simplePayClientGrpcClient.AddCallbackAsync(new AddCallbackRequest()
+    {
+        Url = "https://webhook.site/0e90de65-dced-4301-8eec-15fdf08815d9",
+        Workspace = workspace2
+    });
+    Console.WriteLine($"AddCallback: {resp2}");
+}
 
 void TestResponses()
 {
