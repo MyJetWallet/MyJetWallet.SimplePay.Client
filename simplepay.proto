@@ -357,6 +357,91 @@ message CallbackModel
   string Workspace = 100;
 }
 
+message AddInvoiceRequest
+{
+  string Name = 1;
+  optional string ContactId = 2;
+  string Description = 3;
+  string Asset = 4;
+  string Network = 5;
+  string ExpectedAmount = 6;
+  optional string Expire = 7;
+
+  string Workspace = 100;
+}
+
+message InvoiceResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+
+  SimplePayInvoice Invoice = 1;
+}
+
+message SimplePayInvoice
+{
+  string Id = 1;
+  string Source = 2;
+  string Name = 3;
+  string ContactMetaData = 4;
+  string Description = 5;
+  string Asset = 6;
+  string Network = 7;
+  string Address = 8;
+  string Tag = 9;
+  string PaidAmount = 10;
+  string ExpectedAmount = 11;
+  string PaidPercent = 12;
+  string ExternalId = 13;
+  string CreatedDate = 14;
+  string LastUpdate = 15;
+  InvoiceStatus Status = 16;
+  string ExpirationDate = 17;
+}
+
+enum InvoiceStatus
+{
+    NotPaid = 0;
+    PartiallyPaid = 1;
+    Paid = 2;
+    Overpaid = 3;
+}
+
+message UpdateInvoiceRequest
+{
+  SimplePayInvoice Invoice = 1;
+  string Workspace = 100;
+}
+
+message InvoiceIdRequest
+{
+  string Id = 1;
+
+  string Workspace = 100;
+}
+
+message GetInvoicesRequest
+{
+  string ContactId = 1;
+  string Asset = 2;
+  string Network = 3;
+  InvoiceStatus Status = 4;
+  string FromDate = 5;
+  string ToDate = 6;
+  int32 Take = 7;
+  string LastSeenId = 8;
+
+  string Workspace = 100;
+}
+
+message InvoiceListResponse
+{
+  ResultCodes Result = 1001;
+  optional string Message = 1002;
+
+  repeated SimplePayInvoice Invoices = 1;
+}
+
 /*
  * ====================================================
  * Simple Pay API - Service
@@ -394,6 +479,11 @@ service SimplePayClientGrpc {
   rpc AddCallback(AddCallbackRequest) returns (CallbackResponse);
   rpc ListEnabledCallbacks(GetCallbacksRequest) returns (CallbackListResponse); // get list of enabled callbacks
   rpc DisableCallback(DisableCallbackRequest) returns (CallbackResponse); // disable callback by id
+  
+  rpc CreateInvoice(AddInvoiceRequest) returns (InvoiceResponse); // create invoice
+  rpc UpdateInvoice(UpdateInvoiceRequest) returns (InvoiceResponse); // update invoice
+  rpc GetInvoiceById(InvoiceIdRequest) returns (InvoiceResponse); // get invoice by id
+  rpc GetInvoiceList(GetInvoicesRequest) returns (InvoiceListResponse); // get invoices by filter
 
   // create workspace
   // get payment by id
