@@ -1,9 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Text.Json;
+using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using MyJetWallet.SimplePay;
 using MyJetWallet.SimplePay.Client;
+using MyJetWallet.SimplePay.Client.Models;
 
 var serviceGrpcUrl = "https://simple-pay-api-uat.simple-spot.biz";
 //var serviceGrpcUrl = "http://localhost:80";
@@ -24,9 +27,11 @@ var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
 //await GetDepositAddress(client);
 
 //--Webhooks--//
-//await AddWebhook(client);
+await AddWebhook(client);
 await GetWebhooks(client);
 //await DisableAllWebhooks(client);
+DeserializationDemo();
+
 
 
 async Task DisableAllWebhooks(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
@@ -91,7 +96,6 @@ async Task AddWebhook(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayCli
 void TestResponses()
 {
     var resp1 = new SimplePayContactResponse() { Result = ResultCodes.InternalError, Message = "Test" };
-
 }
 
 Console.ReadLine();
@@ -262,8 +266,44 @@ async Task GetDepositHistory(SimplePayClientGrpc.SimplePayClientGrpcClient simpl
     
     Console.WriteLine($"Deposit History: {resp}");
 }
+
+void DeserializationDemo()
+{
+    var balanceData = "{\n  \"Payload\": [\n    {\n      \"AssetSymbol\": \"ETH\",\n      \"Balance\": \"1\",\n      \"BalanceInUsd\": \"3803.86\"\n    },\n    {\n      \"AssetSymbol\": \"USDT\",\n      \"Balance\": \"9643.689417\",\n      \"BalanceInUsd\": \"9643.6894170\"\n    }\n  ],\n  \"WebhookId\": null,\n  \"MerchantId\": \"pay-001\",\n  \"Timestamp\": \"03/07/2024 11:04:00\",\n  \"Type\": \"Balance\"\n}";
+    var statementData = "{\n  \"Payload\": {\n    \"Id\": \"11694293-7507-4c1d-b5c3-153460a79767\",\n    \"Name\": \"Demo 97407ee6-4014-424c-8a3b-ab85adefe9cc\",\n    \"Description\": \"Test transfer at 2024-03-07T11:03:42.7535050Z\",\n    \"LastUpdate\": \"03/07/2024 11:04:00\",\n    \"Status\": 3,\n    \"Transfers\": [],\n    \"Workspace\": \"pay-001\"\n  },\n  \"WebhookId\": null,\n  \"MerchantId\": \"pay-001\",\n  \"Timestamp\": \"03/07/2024 11:04:00\",\n  \"Type\": \"Statement\"\n}";
+    var depositData = "{\n  \"Payload\": {\n    \"Id\": \"1709809712736\",\n    \"AssetSymbol\": \"ETH\",\n    \"NetworkId\": \"fireblocks-eth-goerli\",\n    \"Amount\": \"0.11\",\n    \"Timestamp\": \"03/07/2024 11:08:35\",\n    \"Txid\": \"Internal Transfer 3350\",\n    \"HasTxid\": true,\n    \"Status\": 3,\n    \"ExplorerUrl\": \"\",\n    \"HasExplorerUrl\": true,\n    \"IsInternal\": true,\n    \"Workspace\": \"pay-001\"\n  },\n  \"WebhookId\": null,\n  \"MerchantId\": \"pay-001\",\n  \"Timestamp\": \"03/07/2024 11:08:35\",\n  \"Type\": \"Deposit\"\n}";
+
+    foreach (var rawData in new List<string>() {balanceData, statementData, depositData})
+    {
+        var data = JsonSerializer.Deserialize<WebhookBaseModel>(rawData);
+        switch (data?.Type)
+        {
+            case WebhookType.Balance:
+            {
+                var balance = JsonSerializer.Deserialize<WebhookModel<RepeatedField<SimplePayBalance>>>(balanceData);
+                Console.WriteLine($"Balance: {JsonSerializer.Serialize(balance, new JsonSerializerOptions() { WriteIndented = true })}");
+                break;
+            }
+            case WebhookType.Statement:
+            {
+                var statement = JsonSerializer.Deserialize<WebhookModel<SimplePayStatement>>(statementData);
+                Console.WriteLine($"Statement: {JsonSerializer.Serialize(statement, new JsonSerializerOptions() { WriteIndented = true })}");
+                break;
+            }
+            case WebhookType.Deposit:
+            {
+                var deposit = JsonSerializer.Deserialize<WebhookModel<SimplePayDeposit>>(depositData);
+                Console.WriteLine($"Deposit: {JsonSerializer.Serialize(deposit, new JsonSerializerOptions() { WriteIndented = true })}");
+                break;
+            }
+        }
+    }
+    
+}
 public enum TransactionAmountType
 {
     Settlement,
     Total
 }
+
+
