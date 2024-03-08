@@ -429,7 +429,7 @@ message GetInvoicesRequest
   string FromDate = 5;
   string ToDate = 6;
   int32 Take = 7;
-  string LastSeenId = 8;
+  int32 Skip = 8;
 
   string Workspace = 100;
 }
