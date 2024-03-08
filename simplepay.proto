@@ -311,7 +311,8 @@ message SimplePayDeposit
   TransferStatus Status = 9;
   optional string ExplorerUrl = 10;
   bool IsInternal = 11;
-
+  optional string InvoiceId = 12;
+  
   string Workspace = 100;
 }
 
