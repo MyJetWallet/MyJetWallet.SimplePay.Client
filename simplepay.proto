@@ -203,6 +203,7 @@ enum ResultCodes {
   BlockchainNotFound = 16;
   StatementAlreadyExists = 17;
   StatementNotFound = 18;
+  InvoiceLimitReached = 19;
 }
 
 message SimplePayResponse
