@@ -313,6 +313,7 @@ message SimplePayDeposit
   optional string ExplorerUrl = 10;
   bool IsInternal = 11;
   optional string InvoiceId = 12;
+  optional string InvoiceName = 13;
   
   string Workspace = 100;
 }
@@ -385,7 +386,7 @@ message SimplePayInvoice
   string Id = 1;
   string Source = 2;
   string Name = 3;
-  string ContactMetaData = 4;
+  optional string ContactId = 4;
   string Description = 5;
   string Asset = 6;
   string Network = 7;
@@ -394,7 +395,6 @@ message SimplePayInvoice
   string PaidAmount = 10;
   string ExpectedAmount = 11;
   string PaidPercent = 12;
-  string ExternalId = 13;
   string CreatedDate = 14;
   string LastUpdate = 15;
   InvoiceStatus Status = 16;
@@ -408,12 +408,6 @@ enum InvoiceStatus
     PartiallyPaid = 2;
     Paid = 3;
     Overpaid = 4;
-}
-
-message UpdateInvoiceRequest
-{
-  SimplePayInvoice Invoice = 1;
-  string Workspace = 100;
 }
 
 message InvoiceIdRequest
@@ -484,7 +478,6 @@ service SimplePayClientGrpc {
   rpc DisableCallback(DisableCallbackRequest) returns (CallbackResponse); // disable callback by id
   
   rpc CreateInvoice(AddInvoiceRequest) returns (InvoiceResponse); // create invoice
-  rpc UpdateInvoice(UpdateInvoiceRequest) returns (InvoiceResponse); // update invoice
   rpc GetInvoiceById(InvoiceIdRequest) returns (InvoiceResponse); // get invoice by id
   rpc GetInvoiceList(GetInvoicesRequest) returns (InvoiceListResponse); // get invoices by filter
 

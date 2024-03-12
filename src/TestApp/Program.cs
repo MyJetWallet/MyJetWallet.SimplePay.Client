@@ -35,7 +35,6 @@ var client = SimplePayFactory.CreateClient(serviceGrpcUrl, apiToken);
 
 //--Invoice--//
 //await CreateInvoice(client);
-await UpdateInvoice(client);
 await GetAllInvoices(client);
 
 
@@ -58,27 +57,6 @@ async Task CreateInvoice(SimplePayClientGrpc.SimplePayClientGrpcClient simplePay
     });
     
     Console.WriteLine($"CreateInvoice: {resp}");
-}
-
-async Task UpdateInvoice(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
-{
-    var resp = await simplePayClientGrpcClient.GetInvoiceListAsync(new ()
-    {
-        Take = 1,
-        Skip = 0,
-        Workspace = workspace
-    });
-    
-    var invoice = resp.Invoices.FirstOrDefault();
-    invoice.Name = $"Updated invoice {DateTime.UtcNow}";
-    
-    var resp2 = await simplePayClientGrpcClient.UpdateInvoiceAsync(new ()
-    {
-        Invoice = invoice,
-        Workspace = workspace
-    });
-    
-    Console.WriteLine($"UpdateInvoice: {resp2}");
 }
 
 async Task GetAllInvoices(SimplePayClientGrpc.SimplePayClientGrpcClient simplePayClientGrpcClient)
