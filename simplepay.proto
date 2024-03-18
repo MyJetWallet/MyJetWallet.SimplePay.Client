@@ -103,6 +103,8 @@ message SimplePayTransfer
   string SettleAsset = 14;           // asset that will be delivered to the recipient
   string SettleAmount = 15;          // amount that will be delivered to the recipient
   string Timestamp = 16;             // timestamp of the transfer
+  string Txid = 17;                  // transaction id
+  string ExplorerUrl = 18;           // url to the transaction explorer
 
   string Workspace = 100;           // identify workspace id for request
 }
