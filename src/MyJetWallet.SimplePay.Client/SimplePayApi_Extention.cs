@@ -72,3 +72,12 @@ public partial class SimplePayBlockchainListResponse : ISimplePayResponse
 {
 }
 
+public partial class InvoiceResponse : ISimplePayResponse
+{
+}
+
+public partial class InvoiceListResponse : ISimplePayResponse
+{
+}
+
+
